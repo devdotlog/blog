@@ -28,7 +28,7 @@ jobs:
       run: hugo --minify
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
+      uses: peaceiris/actions-master@v2
       with:
         github_token: ${{ secrets.HUGO_BLOG_TOKEN }}
         publish_branch: master
