@@ -1,0 +1,35 @@
+# This is a basic workflow to help you get started with Actions
+
+name: hugo deploy
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Runs a single command using the runners shell
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+       hugo-version: "latest"
+ 
+    - name: Build Hugo Site
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-master@v2
+      with:
+        github_token: ${{ secrets.HUGO_BLOG_TOKEN }}
+        publish_branch: master
+        publish_dir: ./public
