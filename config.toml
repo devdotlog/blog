@@ -6,25 +6,22 @@ theme = "cactus"
 
 copyright = "sh0seo"
 
-disqusShortname = "shseo"
-
 googleAnalytics = "UA-156450601-1"
 
 [params]
   colortheme = "classic" # white, light, classic, dark
   description = "뭘 좀 남기자. 맨날 똑같은거 또 찾고."
   mainSectoin = "posts"
+
   showAllPostsOnHomePage = false
   postsOnHomePage = 5 # default 5
+
   tagsOverview = true # default true
   
   # show projects list
   # project list path data/projects.json
   showProjectList = true
   projectsUrl = "https://github.com/sh0seo"
-
-  [params.comments]
-	enable = true # engine = "disques"
 
 [[menu.main]]
 name = "Home"
@@ -43,7 +40,7 @@ weight = 3
 
 [[menu.main]]
 name = "About"
-url = "/about"
+url = "/about/"
 weight = 4
 
 [[params.social]]

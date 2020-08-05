@@ -8,5 +8,7 @@ draft: false
 
 Hugo를 이용한 Static Blog testing.
 
-comment는 일단 disques
+~~comment는 일단 disques~~
+
+여기 아래에 utterence가 나와야 하는데... 되나??
 
