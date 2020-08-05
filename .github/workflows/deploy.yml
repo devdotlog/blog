@@ -24,9 +24,7 @@ jobs:
     - name: Build Hugo Site
       run: hugo --minify
 
-    - name: Hugo gh-pages action
-      uses: mattbailey/actions-hugo@v0.57.2
+    - name: Publish Hugo Site
+      uses: tcitry/publish-hugo-site@v1.0
       with:
         github_token: ${{ secrets.HUGO_BLOG_TOKEN }}
-        publish_branch: master
-        publish_dir: ./public
