@@ -24,8 +24,8 @@ jobs:
     - name: Build Hugo Site
       run: hugo --minify
 
-    - name: Deploy
-      uses: peaceiris/actions-master@v2
+    - name: Hugo gh-pages action
+      uses: mattbailey/actions-hugo@v0.57.2
       with:
         github_token: ${{ secrets.HUGO_BLOG_TOKEN }}
         publish_branch: master
