@@ -26,5 +26,3 @@ jobs:
 
     - name: Publish Hugo Site
       uses: tcitry/publish-hugo-site@v1.0
-      with:
-        github_token: ${{ secrets.HUGO_BLOG_TOKEN }}
