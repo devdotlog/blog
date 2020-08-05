@@ -24,5 +24,8 @@ jobs:
     - name: Build Hugo Site
       run: hugo --minify
 
-    - name: Publish Hugo Site
-      uses: tcitry/publish-hugo-site@v1.0
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.HUGO_BLOG_TOKEN }}
+          publish_dir: ./public
