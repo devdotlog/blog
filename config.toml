@@ -1,5 +1,52 @@
-baseURL = "https://shdotseo.github.io/"
+baseURL = "https://sh0seo.github.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 
 theme = "cactus"
+
+copyright = "sh0seo"
+
+disqusShortname = "shseo"
+
+googleAnalytics = "UA-156450601-1"
+
+[params]
+  colortheme = "classic" # white, light, classic, dark
+  description = "뭘 좀 남기자. 맨날 똑같은거 또 찾고."
+  mainSectoin = "posts"
+  showAllPostsOnHomePage = false
+  postsOnHomePage = 5 # default 5
+  tagsOverview = true # default true
+  
+  # show projects list
+  # project list path data/projects.json
+  showProjectList = true
+  projectsUrl = "https://github.com/sh0seo"
+
+  [params.comments]
+	enable = true # engine = "disques"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+[[params.social]]
+  name = "github"
+  link = "https://github.com/sh0seo/"
+
