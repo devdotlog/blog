@@ -13,16 +13,16 @@ jobs:
     
     - name: Setup Ruby for use with actions
       uses: actions/setup-ruby@v1.0.0
-      
+
     - name: Setup Jekyll for Gem
       run: gem install bundler 
-    
+
     - uses: actions/cache@v1
       with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        path: ~/vendor/bundle
+        key: ${{ runner.os }}-gems-01-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
-          ${{ runner.os }}-gems-
+          ${{ runner.os }}-gems
           
     - uses: helaili/jekyll-action@2.0.3
       env:
