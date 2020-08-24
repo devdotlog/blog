@@ -3,13 +3,20 @@ name: jekyll deploy
 on:
   push:
     branches: [ master ]
-
 jobs:
-  build:
+  jekyll:
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v2
-    - uses: helaili/jekyll-action@2.0.1
+      
+    - name: Setup Ruby for use with actions
+      uses: actions/setup-ruby@v1.0.0
+
+    - name: Setup Jekyll for Gem
+      run: gem install bundler 
+      
+    # Standard usage
+    - uses:  helaili/jekyll-action@2.0.3
       env:
         JEKYLL_PAT: ${{ secrets.HUGO_BLOG_TOKEN }}
