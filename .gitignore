@@ -1,6 +1,9 @@
-# Hugo default output directory
-/public
-/resource/_gen/
+# Jekyll default output directory
+_site/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
 
 ## OS Files
 # Windows
