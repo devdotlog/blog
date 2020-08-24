@@ -17,9 +17,6 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
     
-    - name: Setup Jekyll for Gem
-      run: gem install bundler 
-    
     # Standard usage
     - uses:  helaili/jekyll-action@2.0.3
       env:
