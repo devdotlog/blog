@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
 jobs:
-  jekyll:
+  github-pages:
     runs-on: ubuntu-latest
     
     steps:
