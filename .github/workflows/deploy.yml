@@ -12,9 +12,8 @@ jobs:
       
     # Standard usage
       name: Jekyll Actions
-    - uses:  helaili/jekyll-action@2.0.3
+    - uses:  helaili/jekyll-action@2.0.4
+      with:
+        target_branch: gh-pages
       env:
         JEKYLL_PAT: ${{ secrets.HUGO_BLOG_TOKEN }}
-        jekyll_src: _site
-        target_branch: gh-pages 
-    
