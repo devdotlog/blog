@@ -10,10 +10,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-      
+          
     # Standard usage
       name: Jekyll Actions
-    - uses:  helaili/jekyll-action@2.0.4
-      with:
-        target_branch: gh-pages
+    - uses: helaili/jekyll-action@2.0.4
       env:
-        JEKYLL_PAT: ${{ secrets.HUGO_BLOG_TOKEN }}
+        JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+      with:
+        target_branch: 'gh-pages'
