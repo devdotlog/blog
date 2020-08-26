@@ -19,6 +19,11 @@
 			"name":"역대 로또당첨번호 listing",
 			"url":"https://sh0seo.github.com/lottery-history/",
 			"desc":"역대 로또당첨번호를 전체 lising하는 페이지(golang, github action)"
+		},
+		{
+			"name":"Clash Royale Play Replay Youtube 운영",
+			"url":"https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/",
+			"desc":"Clash Royale 게임 플레이 영상 Youtube"
 		}
 	]
 }
