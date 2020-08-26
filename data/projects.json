@@ -1,9 +1,24 @@
 {
 	"list": [
 		{
-			"name":"Hexo",
-			"url":"https://hexo.io/",
-			"desc":"A fast, simple & powerful blog framework"
+			"name":"DCCafe",
+			"url":"https://github.com/DCBlock",
+			"desc":"DigiCAP 사내 전용 커피 판매 시스템(java, spring boot, api server)"
+		},
+		{
+			"name":"TimeTimer",
+			"url":"https://play.google.com/store/apps/details?id=io.animal.mouse",
+			"desc":"안드로이드 Timer App(java, android)"
+		},
+		{
+			"name":"BabyLock",
+			"url":"https://github.com/sh0seo/BabyLock",
+			"desc":"동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App(java, android)"
+		},
+		{
+			"name":"역대 로또당첨번호 listing",
+			"url":"https://sh0seo.github.com/lottery-history/",
+			"desc":"역대 로또당첨번호를 전체 lising하는 페이지(golang, github action)"
 		}
 	]
 }
