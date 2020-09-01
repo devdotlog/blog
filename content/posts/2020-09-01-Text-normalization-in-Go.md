@@ -64,7 +64,7 @@ func normalize(in rune) rune {
 
 ## Golang에서 Unicode Normalization
 
-Golang에서는 유니코드 정규화를 위해 golang blog에서 [가이드](https://blog.golang.org/normalization)하고 있습니다. 
+Golang에서는 유니코드 정규화를 위해 golang blog에서 친절하게 [가이드](https://blog.golang.org/normalization)하고 있습니다.
 
 ```
 package main
@@ -92,6 +92,7 @@ func main() {
 ## 결론
 
 사용자에게서 제약 없는 문자를 입력 받을 때는 유니코드 정규화를 고려해야 합니다. 
+한글, 영문자만 허용 하다가, 세상 모든 단어를 입력 가능하게 바꾸니 이런 문제도 경험합니다.
 
 ## 참고
 
