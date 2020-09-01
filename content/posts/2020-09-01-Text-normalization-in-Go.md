@@ -5,13 +5,18 @@ draft: true
 tags: go, unicode, normalization, 유니코드, 정규화
 ---
 
-아래와 같이 특수 문자가 섞여 있는 문자열이 있다.
+# 나만 몰랐던 유니코드 정규화
+
+아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다. 
 
 ```"São Paulo, Brazil. Wien, Österreich."```
 
-이런 문자열을 아래와 같이 알파벳으로 변경하고 싶다면 어떻게 해야 할까?
+이런 문자열을 아래와 같이 알파벳으로 변경하고 싶다면 어떻게 해야 할까요?
 
 ```"Sao Paulo, Brazil. Wien, Osterreich."``` 
+
+고민 없이 쉽게 할 수 있는 방법은 대상 문자를 찾아서 원하는 문자로 치환하는 방법입니다.
+치환해야 할 문자 종류가 많지 않다면, 간단하게 적용할 수 있는 방법입니다.
 
 ```
 package main
@@ -39,8 +44,23 @@ func normalize(in rune) rune {
     return in
 }
 ```
+[https://play.golang.org/p/PmFFH5frx0H](https://play.golang.org/p/PmFFH5frx0H)
 
-참고
+그런데 치환 대상 문자의 개수가 **1750개 이상**이라면 어떻게 해야 할까요?
+
+이럴 때 필요한 것이 **Unicode Normalization(유니코드 정규화)**입니다.
+
+## 특수문자? combining characters?
+
+위에서 특수문자라고 표현했던 문자는 Combining Characters(결합문자)입니다. 우리나라에서는 보통 영어 발음에 악센트를 표현할 때 아래처럼 사용합니다. 
+
+&#195;
+&#767;
+&#2400;
+
+이런 문자를 표기하기 위해 사용되는 것이 combining characters 입니다.   
+
+## 참고
 
 - https://www.google.com/search?q=Unicode+%EA%B8%80%EC%9E%90+%EC%A4%91+%EC%9D%BC%EB%B6%80%EB%8A%94+%ED%95%A9%EC%9E%90(combining+characters)&oq=Unicode+%EA%B8%80%EC%9E%90+%EC%A4%91+%EC%9D%BC%EB%B6%80%EB%8A%94+%ED%95%A9%EC%9E%90(combining+characters)&aqs=chrome..69i57.256j0j7&sourceid=chrome&ie=UTF-8
 - https://miaow-miaow.tistory.com/36
