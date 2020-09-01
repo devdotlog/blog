@@ -2,7 +2,7 @@
 title: "Text normalization in Go"
 date: 2020-09-01T04:15:00+09:00
 draft: false
-tags: go, unicode, normalization, 유니코드, 정규화
+tags: [go, unicode, normalization, 유니코드, 정규화]
 ---
 
 # 나만 몰랐던 유니코드 정규화
