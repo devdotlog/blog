@@ -1,7 +1,7 @@
 ---
 title: "Github Action을 이용한 빌드 & 실행에서 패스워드 숨기기"
 date: 2020-09-03T14:35:00+09:00
-draft: true
+draft: false
 categories: go
 tags: [go, github, action]
 ---
@@ -230,9 +230,13 @@ jobs:
         DB_PW: ${{ secrets.DB_PW}}
 ```
 
-```${{ secrets.XXXXX }}```은 
+그렇다면 ```${{ secrets.XXXXX }}``` 값은 어디에서 설정하면 될까요? github의 해당 프로젝트의 setting 에서 관리할 수 있습니다. 
 
 ![](https://sh0seo.github.io/images/secrets-value.png)
+
+## 결론
+
+Github Action 기능을 이용하여 golang 소스코드를 실행하는 기능을 만들었습니다. Travis CI에서 처리했던것 보다는 좀 더 github 친화적이라서 사용하기도 편하고, 특별한 서버 없이도 수행할 수 있는 장점이 있습니다. 저 같은 경우는 cron 기능, DB 업데이트 등을 모두 golang + github action으로 처리하고 있습니다. 좋은 기능은 역시 자주 사용해서 잊어먹지 않아야하고 이렇게 공유해야 합니다. ^^;
 
 ## 참조
 
