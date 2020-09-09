@@ -45,9 +45,10 @@ $ python -m http.server --bind 127.0.0.1 8080
 
 ### go를 이용한 웹서버
 
-go는 파일 웹서를 위한 심플한 코딩이 필요합니다.
+go는 정적파일 웹서버를 구동하기 위해 심플한 코딩이 필요합니다.
 
 ```
+// main.go
 package main
 
 import "net/http"
@@ -56,6 +57,10 @@ func main() {
   http.Handle("/", http.FileServer(http.Dir("./")))
   http.ListenAndServe(":8080", nil)
 }
+```
+
+```
+$ go run main.go
 ```
 
 ## Release 소스를 Deploy 없이 테스트
