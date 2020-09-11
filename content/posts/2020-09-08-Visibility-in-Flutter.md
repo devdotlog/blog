@@ -8,7 +8,7 @@ tags: [flutter, widget, visibility]
 
 # Flutter에서 모든건 Widget이다. Show/Hide까지도.
 
-![all+widget+image]()
+![all+widget+image](https://sh0seo.github.io/images/flutter-widget-all.png)
 
 flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 [Text](https://api.flutter.dev/flutter/widgets/Text-class.html)부터, 다른 Widget을 담기 위한 [Container](https://api.flutter.dev/flutter/widgets/Container-class.html)까지도 모두 Widget입니다. 한마디로 사용자에게 보이든, 보이지 않든 화면을 구성하는 모든 것은 Widget입니다.
 
