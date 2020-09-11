@@ -8,4 +8,6 @@ blog by hugo
 - [X] Theme의 기본 설정이 적용된 부분을 개인화 적용
 - [X] 소스코드가 포함된 글을 posting
 - [X] 이미지가 포함된 글을 posting
-- [ ] 소스코드 하이라이팅 적용
+- [X] 소스코드 하이라이팅 적용
+- [ ] mainroad theme로 변경
+- [ ] main image 변경

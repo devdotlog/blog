@@ -9,7 +9,7 @@ copyright = "sh0seo"
 googleAnalytics = "UA-156450601-1"
 
 [params]
-  colortheme = "classic" # white, light, classic, dark
+  colortheme = "white" # white, light, classic, dark
   description = "뭘 좀 남기자. 맨날 똑같은거 또 찾고."
   mainSectoin = "posts"
 

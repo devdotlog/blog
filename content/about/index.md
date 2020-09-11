@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: 2020-08-05T16:05:02+09:00
+date: 2020-08-05T00:00:00+09:00
 draft: false
 ---
 
@@ -9,3 +9,4 @@ draft: false
 - 프로그래 언어로 console 화면에 **Hello World!** 찍는 직업을 갖는 사람
 - 회사에서는 spring boot를 이용한 backend 개발로 먹고 사는 사람
 - golang에 관심을 갖고 있는 사람([stackoverflow에 `go`로 1000점 언제찍냐;;](https://stackoverflow.com/users/1982418/sh-seo)) 
+- Microsoft 기술 공부해야겠다는 마음만 있는 사람
