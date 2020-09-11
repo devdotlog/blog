@@ -8,11 +8,11 @@ tags: [flutter, widget, visibility]
 
 # Flutter에서 모든건 Widget이다. Show/Hide까지도.
 
-![all+widget+image](https://sh0seo.github.io/images/flutter-widget-all.png)
-
+![](https://sh0seo.github.io/images/flutter-widget-all.png)
+         
 flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 [Text](https://api.flutter.dev/flutter/widgets/Text-class.html)부터, 다른 Widget을 담기 위한 [Container](https://api.flutter.dev/flutter/widgets/Container-class.html)까지도 모두 Widget입니다. 한마디로 사용자에게 보이든, 보이지 않든 화면을 구성하는 모든 것은 Widget입니다.
 
-![Container](https://sh0seo.github.io/images/flutter-widget-container.png)
+![](https://sh0seo.github.io/images/flutter-widget-container.png)
 
 그리고 한발 더 나아가서 Widget 자체의 Show, Hide 까지도 별도의 Widget([Visibility](https://api.flutter.dev/flutter/widgets/Visibility-class.html))입니다.
 
@@ -37,7 +37,7 @@ document.getElementById("element").style.display = "none";
 
 그렇다면 flutter에서는 Visibility Widget으로 어떻게 show, hide를 구현 할까요? 아래와 같이 중앙에 Text 문구를 출력하는 앱이 있습니다. 플로팅 버튼을 클릭하면 앱이 사라지게 구현을 해봅시다.
 
-![이미지](https://sh0seo.github.io/images/flutter-widget-text.png)
+![](https://sh0seo.github.io/images/flutter-widget-text.png)
 
 ```
 class _MyHomePageState extends State<MyHomePage> {
