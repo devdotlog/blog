@@ -6,8 +6,6 @@ cagegory: flutter
 tags: [flutter, widget, visibility]
 ---
 
-# Flutter에서 모든건 Widget이다. Show/Hide까지도.
-
 ![](https://sh0seo.github.io/images/flutter-widget-all.png)
          
 flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 [Text](https://api.flutter.dev/flutter/widgets/Text-class.html)부터, 다른 Widget을 담기 위한 [Container](https://api.flutter.dev/flutter/widgets/Container-class.html)까지도 모두 Widget입니다. 한마디로 사용자에게 보이든, 보이지 않든 화면을 구성하는 모든 것은 Widget입니다.
@@ -20,7 +18,7 @@ flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 [Text
 
 UI를 다루는 다른 프레임워크를 보면 일반적으로 A라는 컴포넌트를 사용자에게 Show, Hide 처리하는 것은 그 컴포넌트 자체에서 show(), hide() 함수(혹은 메소드)를 제공하거나 투명도를 0으로 설정하여 처리하곤합니다. 예를 들어 안드로이드에서 TextView는 xml에서 visibility를 설정할 수 있습니다.
 
-```
+```xml
 <TextView
     ...
     android:visibility="gone"
@@ -39,7 +37,7 @@ document.getElementById("element").style.display = "none";
 
 ![](https://sh0seo.github.io/images/flutter-widget-text.png)
 
-```
+```dart
 class _MyHomePageState extends State<MyHomePage> {
   bool _visibility = true;
 
@@ -83,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Text Widget을 **Visibility Widget**의 child로 감싸줍니다. 그리고 변경이 필요한 시점에 _visibility를 이용하여 상태를 Text Widget의 show/hide를 관리합니다.
 
-```
+```dart
 children: <Widget>[
   Visiblity(
     child: Text('이 글자를 안보이게 하고 싶습니다.',

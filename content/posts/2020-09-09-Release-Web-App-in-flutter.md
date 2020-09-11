@@ -8,8 +8,6 @@ tags: [flutter, web, release]
 
 ![release](https://sh0seo.github.io/images/release.png)
 
-# Flutter로 개발한 Web App을 Release 모드로 테스트하기
-
 Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전에 Release 상태로 테스트를 진행해야 합니다.
 
 테스트는 아래와 같은 순서로 진행합니다.
@@ -22,8 +20,8 @@ Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전�
 
 대상 프로젝트로 이동하고 command 라인에서 다음 명령을 실행하여 빌드합니다.
 
-```
-> flutter build web
+```shell
+$ flutter build web
 ```
 
 정상적으로 빌드가 되었다면 프로젝트 폴더 내에 ```프로젝트폴더/build/web``` 디렉토리에 index.html 파일을 포함한 release 파일들이 생성된 것을 확인할 수 있습니다.
@@ -39,7 +37,7 @@ Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전�
 
 미리 빌드한 build/web 디렉토리로 이동하여 아래와 같이 실행하면 ```127.0.0.1:8080``` 주소로 브라우저에서 확인이 가능합니다.
 
-```
+```shell
 $ python -m http.server --bind 127.0.0.1 8080
 ```
 
@@ -47,7 +45,7 @@ $ python -m http.server --bind 127.0.0.1 8080
 
 go는 정적파일 웹서버를 구동하기 위해 심플한 코딩이 필요합니다.
 
-```
+```go
 // main.go
 package main
 
@@ -59,7 +57,7 @@ func main() {
 }
 ```
 
-```
+```shell
 $ go run main.go
 ```
 
@@ -71,8 +69,8 @@ aws, google cloud, cafe24와 같은 웹 호스팅 계정이 있다면 테스트�
 
 go(혹은 python)으로 구동 중인 로컬의 서버의 주소는 ```127.0.0.1:8080``` 라고 하면, ngrok 으로 아래와 같이 command에서 실행합니다.
 
-```
-$ngrok http 8080
+```shell
+$ ngrok http 8080
 ```
 ngrok이 실행되면 임시 URL이 화면에 출력됩니다. 해당 URL로 접속하면 로컬의 8080 서버로 http 요청을 전달해주게 됩니다.
 

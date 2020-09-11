@@ -1,6 +1,6 @@
 baseURL = "https://sh0seo.github.io/"
 languageCode = "en-us"
-title = "My Blog"
+title = "my blog"
 
 theme = "cactus"
 

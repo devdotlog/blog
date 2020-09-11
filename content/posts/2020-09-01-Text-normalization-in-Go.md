@@ -6,8 +6,6 @@ categories: go
 tags: [go, unicode, normalization, 유니코드, 정규화]
 ---
 
-# 나만 몰랐던 유니코드 정규화
-
 아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다. 
 
 ```"São Paulo, Brazil. Wien, Österreich."```
@@ -19,7 +17,7 @@ tags: [go, unicode, normalization, 유니코드, 정규화]
 고민 없이 쉽게 할 수 있는 방법은 대상 문자를 찾아서 원하는 문자로 치환하는 방법입니다.
 치환해야 할 문자 종류가 많지 않다면, 간단하게 적용할 수 있는 방법입니다.
 
-```
+```go
 package main
 
 import (
@@ -66,7 +64,7 @@ func normalize(in rune) rune {
 
 Golang에서는 유니코드 정규화를 위해 golang blog에서 친절하게 [가이드](https://blog.golang.org/normalization)하고 있습니다.
 
-```
+```go
 package main
 
 import (

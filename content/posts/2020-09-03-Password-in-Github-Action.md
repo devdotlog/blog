@@ -6,8 +6,6 @@ categories: go
 tags: [go, github, action]
 ---
 
-# Github Actions?
-
 ![](https://sh0seo.github.io/images/github-actions.png)
 
 Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다. 
@@ -48,7 +46,7 @@ Github Actions을 이용하면 hugo blog 빌드 & 배포, cron을 이용한 반�
 4. 등록된 사용자인지 확인한다.
 5. 카드 번호를 hash 한 값을 DB에 업데이트 한다.
 
-```
+```go
 package main
 
 import (
@@ -187,7 +185,7 @@ on:
 
 전체 스크립트는 아래와 같습니다.
 
-```
+```yml
 name: update
 
 on:
@@ -224,7 +222,7 @@ jobs:
 
 소스코드를 실행하기 위해 필요한 DB 접속정보는 공개되면 안되기 때문에 환경설정에서 읽어서 처리하도록 합니다. Github Action에서 환경설정에 특정 값을 설정하기 위해서는 ```env```에 설정을 합니다. 아래 스크립트의 의미는 secrets.DB_HOST에 설정된 값을 DB_HOST 환경변수에 저장하겠다는 의미입니다.
 
-```
+```yml
       env:
         DB_HOST: ${{ secrets.DB_HOST}}
         DB_PW: ${{ secrets.DB_PW}}
