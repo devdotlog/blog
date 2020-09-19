@@ -1,6 +1,6 @@
 ---
 title: "Youtube 구독자 100명 달성 후기"
-date: 2020-09-18T00:00:00+09:00
+date: 2020-09-18T00:08:00+09:00
 draft: false
 cagegory: youtube
 tags: [youtube]
