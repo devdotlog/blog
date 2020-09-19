@@ -38,4 +38,4 @@ jobs:
         ACCESS_TOKEN: ${{secrets.HUGO_BLOG_TOKEN}}
         APP_ID: ${{secrets.APP_ID}}
         APP_SECRET: ${{secrets.APP_SECRET}}
-       # BLOG_DIR: ${{secrets.BLOG_DIR}}  
+        BLOG_DIR: ${{secrets.BLOG_DIR}}  
