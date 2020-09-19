@@ -15,4 +15,3 @@ Hugo를 이용한 Static Blog testing.
 잘나오네 Good.
 
 그런데 누가 댓글쓰지도 않는거 달아서 뭐하나... ㅎ;;
-
