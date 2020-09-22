@@ -1,6 +1,6 @@
 ---
 title: "Youtube 구독자 100명 달성 후기"
-date: 2020-09-18T00:08:00+09:00
+date: 2020-09-18T00:00:00+09:00
 draft: false
 cagegory: youtube
 tags: [youtube]
@@ -32,3 +32,5 @@ tags: [youtube]
 ![](https://sh0seo.github.io/images/youtube_colosseum.png)
 
 100명을 구독자로 확보하면서 느낌점은 **이렇게 하면 안된다**라는 거였습니다. 의외로 사람들은 영상에 유투버의 모습이 있는 것을 선호합니다. 다른 유투버들이 하는 방식을 최대한 차용하는 것이 많은 구독자를 모으는 방법인거 같습니다. 
+
+재미있게 즐겼던 게임을 좀 더 즐길수 있었던 좋은 시간이였습니다.
