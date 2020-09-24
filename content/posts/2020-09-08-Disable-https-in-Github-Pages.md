@@ -32,7 +32,7 @@ Custom Domain이란 직접 구매한 도메인을 의미합니다. [가비아](h
 
 [jejucctv.site](http://jejucctv.site/)를 만들면서 http로 제공되는 HLS 스트리밍을 해야하는 작업이 있었습니다. 문제는 대부분의 웹브라우저는 보안 상의 문제로 혼합 콘텐츠(Mixed Content)를 허용하지 않습니다. 혼합 콘텐츠란 https 사이트 내에서는 http를 이용하여 외부 resource 사용 하지 못하는 것을 말합니다. 
 
-이런 혼합 콘텐츠 문제로 https를 사용하지 못하지 않고 Github Page를 이용하기 위해서 http를 이용한 Github Page 사용 방법을 적용하였습니다.
+이런 혼합 콘텐츠 문제로 https를 사용하지 않고 Github Page를 이용하기 위해서 http를 이용한 Github Page 사용 방법을 적용하였습니다.
 
 # 참고
 
