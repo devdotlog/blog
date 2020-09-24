@@ -8,7 +8,7 @@ tags: [github, pages]
 
 ![](https://sh0seo.github.io/images/https-main.png)
 
-Github Pages는 정적 웹사이트를 제공하는 서비스하는 기능입니다. Github `계정명.github.io` 도메인을 자동으로 사용할 수 있는 괜찮은 서비스입니다. 기본적으로 [jekyll](https://jekyllrb-ko.github.io)을 이용하여 서비스를 제공합니다. 
+Github Pages는 정적 웹사이트를 제공하는 기능입니다. Github `계정명.github.io` 도메인을 자동으로 사용할 수 있는 괜찮은 서비스입니다. 기본적으로 [jekyll](https://jekyllrb-ko.github.io)을 이용하여 서비스를 제공합니다. 
 
 `계정명.github.io` URL은 default로 https를 활성화 상태로 제공이 됩니다. `setting`으로 이동해서 보면 아래와 같이 Github Pages에 대한 설정을 변경할 수 있습니다.
 
@@ -26,7 +26,7 @@ Github Pages는 정적 웹사이트를 제공하는 서비스하는 기능입니
 
 Custom Domain이란 직접 구매한 도메인을 의미합니다. [가비아](https://www.gabia.com) 같은 곳에서 별도로 자신만의 도메인을 구압하여 Github Page 설정에서 CNAME에 저장하면 됩니다.
 
-![](https://sh0seo.github.io/images/https-ensable.png)
+![](https://sh0seo.github.io/images/https-enable.png)
 
 # 왜 공짜 https를 안쓰는 거지?
 
