@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.75.1" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>my blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="my blog">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-156450601-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="My Blog" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/logo.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">My Blog</div>
+					<div class="logo__tagline">Just do it</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item menu__item--active">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/post/">
+				
+				<span class="menu__text">All posts</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/tags">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/project/">
+				
+				<span class="menu__text">Projects</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main list" role="main">
+	<article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-25-sentry-error-report/" rel="bookmark">
+			Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		dartpad.dev는 dart 언어를 직접 실행할 수 있는 REPL(read-eval-print loop) 사이트입니다. dart 개발 환경을 따로 구축하지 않고 dart 코드를 바로 실행해볼 수 있는 유용한 사이트입니다.
+Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 RUN을 클릭하면 결과를 확인할 수 있습니다.
+소스코드 공유 기능 부재 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 play.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-08-disable-https-in-github-pages/" rel="bookmark">
+			Github Pages에서 HTTPS를 사용하지 않기
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Github Pages는 정적 웹사이트를 제공하는 기능입니다. Github 계정명.github.io 도메인을 자동으로 사용할 수 있는 괜찮은 서비스입니다. 기본적으로 jekyll을 이용하여 서비스를 제공합니다.
+계정명.github.io URL은 default로 https를 활성화 상태로 제공이 됩니다. setting으로 이동해서 보면 아래와 같이 Github Pages에 대한 설정을 변경할 수 있습니다.
+https를 사용하고 싶지 않다면? 만약, default로 제공되는 https를 사용하지 않는다면 어떻게 해야 할까요? default로 https를 제공하지만 계정명.github.io URL를 사용한다면 무조건 HTTPS 상태가 강제됩니다. 아래와 같이 setting -&gt; Github Pages -&gt; Enforce HTTPS는 설정을 변경할 수 없는 상태로 제공됩니다.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-23-dartpad-gist-in-flutter-demo/" rel="bookmark">
+			DartPad와 Gist를 이용한 Flutter UI Demo 만들기
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		dartpad.dev는 dart 언어를 직접 실행할 수 있는 REPL(read-eval-print loop) 사이트입니다. dart 개발 환경을 따로 구축하지 않고 dart 코드를 바로 실행해볼 수 있는 유용한 사이트입니다.
+Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 RUN을 클릭하면 결과를 확인할 수 있습니다.
+소스코드 공유 기능 부재 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 play.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-18-youtube-subscribe/" rel="bookmark">
+			Youtube 구독자 100명 달성 후기
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		2016년 3월 2일 클래시로얄 게임이 전세계에 출시됐었습니다. 슈퍼셀에서 만든 게임으로 기존에 없던 게임 방식으로 높은 인기를 끌었었다.
+재미있었고 인기도 많았습니다. 국내외 많은 유투버들이 생기기 시작한건 그 때즘인거 같습니다. 국내에는 JUNE, 하창봉, 테드 등 30십만 이상 구독자를 보유한 유투버들도 생겼습니다.
+그래서 나는? 2018년 초반쯤 게임 인기에 게임을 시작했고 상당히 재미있게 즐기다가 다른 게임을 하면서 그만두게 되었습니다. 그러다가 2019년 말쯤에 다시 한번 시작하게되었습니다. 유투브 영상을 해보자는 심산에 즐겁게 했던 아이템으로 찾았습니다.
+사용한 툴은?
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-08-visibility-in-flutter/" rel="bookmark">
+			Flutter에서 모든건 Widget이다. Show/Hide까지도.
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 Text부터, 다른 Widget을 담기 위한 Container까지도 모두 Widget입니다. 한마디로 사용자에게 보이든, 보이지 않든 화면을 구성하는 모든 것은 Widget입니다.
+그리고 한발 더 나아가서 Widget 자체의 Show, Hide 까지도 별도의 Widget(Visibility)입니다.
+다른 UI에서 Visibility UI를 다루는 다른 프레임워크를 보면 일반적으로 A라는 컴포넌트를 사용자에게 Show, Hide 처리하는 것은 그 컴포넌트 자체에서 show(), hide() 함수(혹은 메소드)를 제공하거나 투명도를 0으로 설정하여 처리하곤합니다. 예를 들어 안드로이드에서 TextView는 xml에서 visibility를 설정할 수 있습니다.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-09-release-web-app-in-flutter/" rel="bookmark">
+			Flutter로 개발한 Web App을 Release 모드로 테스트하기
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전에 Release 상태로 테스트를 진행해야 합니다.
+테스트는 아래와 같은 순서로 진행합니다.
+ Web App을 Release 모드로 build Web Server 실행 테스트  Release 모드로 build 대상 프로젝트로 이동하고 command 라인에서 다음 명령을 실행하여 빌드합니다.
+$ flutter build web 정상적으로 빌드가 되었다면 프로젝트 폴더 내에 프로젝트폴더/build/web 디렉토리에 index.html 파일을 포함한 release 파일들이 생성된 것을 확인할 수 있습니다.
+Web Server 실행 빌드된 소스는 정적 웹페이지 리소스입니다.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-03-password-in-github-action/" rel="bookmark">
+			Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.
+Github Actions을 이용하면 hugo blog 빌드 &amp; 배포, cron을 이용한 반복적인 업무 자동화도 할 수 있습니다.
+Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주일에 한번씩 DB를 업데이트 해야하는 일이 있다고 가정합니다.
+ 사용하는 DB용 클라이언트를 실행 login/password로 로그인 업데이트 query를 수행하기 위한 데이터 확인 Query를 실행 잊지 않고 정해진 요일에 반복 수행  아마도 개발자는 위와 같은 단계를 반복적으로 수행하게 됩니다.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-09-01-text-normalization-in-go/" rel="bookmark">
+			Text normalization in Go
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다.
+&quot;São Paulo, Brazil. Wien, Österreich.&quot;
+이런 문자열을 아래와 같이 알파벳으로 변경하고 싶다면 어떻게 해야 할까요?
+&quot;Sao Paulo, Brazil. Wien, Osterreich.&quot;
+고민 없이 쉽게 할 수 있는 방법은 대상 문자를 찾아서 원하는 문자로 치환하는 방법입니다. 치환해야 할 문자 종류가 많지 않다면, 간단하게 적용할 수 있는 방법입니다.
+package main import ( &#34;fmt&#34; &#34;strings&#34; ) func main() { data := &#34;São Paulo, Brazil. Wien, Österreich.&#34; fmt.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/2020-08-05-hello-world/" rel="bookmark">
+			Hello World
+			</a>
+		</h3>
+		
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Hello World! Hugo를 이용한 Static Blog testing.
+comment는 일단 disques
+여기 아래에 utterence가 나와야 하는데&hellip; 되나??
+잘나오네 Good.
+그런데 누가 댓글쓰지도 않는거 달아서 뭐하나&hellip; ㅎ;;
+	</div>
+</article>
+</main>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://sh0seo.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/2020-09-25-sentry-error-report/">Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2020-09-08-disable-https-in-github-pages/">Github Pages에서 HTTPS를 사용하지 않기</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2020-09-23-dartpad-gist-in-flutter-demo/">DartPad와 Gist를 이용한 Flutter UI Demo 만들기</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2020-09-18-youtube-subscribe/">Youtube 구독자 100명 달성 후기</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/2020-09-08-visibility-in-flutter/">Flutter에서 모든건 Widget이다. Show/Hide까지도.</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/github/">github</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/go/">go</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/action/" title="action">action</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dartpad/" title="dartpad">dartpad</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/flutter/" title="flutter">flutter</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gist/" title="gist">gist</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github/" title="github">github</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/go/" title="go">go</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/normalization/" title="normalization">normalization</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pages/" title="pages">pages</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/release/" title="release">release</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sentry/" title="sentry">sentry</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/unicode/" title="unicode">unicode</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/visibility/" title="visibility">visibility</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web/" title="web">web</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/widget/" title="widget">widget</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/youtube/" title="youtube">youtube</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C/" title="유니코드">유니코드</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%EC%A0%95%EA%B7%9C%ED%99%94/" title="정규화">정규화</a>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 my blog.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석 - my blog</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-156450601-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="My Blog" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/img/logo.png">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">My Blog</div>
+					<div class="logo__tagline">Just do it</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/post/">
+				
+				<span class="menu__text">All posts</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/tags">
+				
+				<span class="menu__text">Tags</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/project/">
+				
+				<span class="menu__text">Projects</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석</h1>
+			
+		</header><div class="content post__content clearfix">
+			<p><img src="https://sh0seo.github.io/images/dart-main.png" alt=""></p>
+<p><a href="https://dartpad.dev/">dartpad.dev</a>는 dart 언어를 직접 실행할 수 있는 REPL(read-eval-print loop) 사이트입니다. dart 개발 환경을 따로 구축하지 않고 dart 코드를 바로 실행해볼 수 있는 유용한 사이트입니다.</p>
+<h1 id="flutter-ui-테스트-기능">Flutter UI 테스트 기능</h1>
+<p>dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 <code>RUN</code>을 클릭하면 결과를 확인할 수 있습니다.</p>
+<p><img src="https://sh0seo.github.io/images/dart-flutter-ui.png" alt=""></p>
+<h1 id="소스코드-공유-기능-부재">소스코드 공유 기능 부재</h1>
+<p>dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 <a href="https://play.golang.org/">play.golang.org</a>에는 <code>share</code> 기능을 통해 테스트한 코드를 공유할 수 있습니다.</p>
+<p><img src="https://sh0seo.github.io/images/dart-golang.png" alt=""></p>
+<h1 id="gist를-이용한-flutter-ui-코드-공유하기">Gist를 이용한 Flutter UI 코드 공유하기</h1>
+<p>작성한 코드를 매번 따로 저장하는 일은 번거로운 일이 아닐수 없습니다.
+이런 단점을 보완할 수 있는 기능으로 <a href="https://gist.github.com/">Gist</a>를 이용하는 방법이 있습니다.</p>
+<ol>
+<li>gist에 public 상태로 에러 없는 Flutter 코드를 저장합니다.</li>
+<li>코드를 저장하면 아래와 같이 URL에 ID를 확인할 수 있습니다.</li>
+</ol>
+<p><img src="https://sh0seo.github.io/images/dart-gist.png" alt=""></p>
+<ol start="3">
+<li>gist의 id를 dartpad.dev에 URL Path로 지정합니다.</li>
+</ol>
+<p><img src="https://sh0seo.github.ioimages/dart-dartpad.png" alt=""></p>
+<h1 id="결론">결론</h1>
+<p>Gist와 dartpad.dev를 이용하면 Flutter UI를 테스트하면서 코드를 공유도 가능합니다.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/flutter/" rel="tag">flutter</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/sentry/" rel="tag">sentry</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+</main>
+
+
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "shseo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 my blog.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>
