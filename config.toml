@@ -5,7 +5,7 @@ languageCode = "en-us"
 title = "my blog"
 paginate = 10
 theme = "mainroad"
-disqusShortname = "sh0seo"
+disqusShortname = "devdotlog"
 googleAnalytics = "UA-156450601-1"
 
 [Author]
