@@ -11,7 +11,7 @@ googleAnalytics = "UA-156450601-1"
 [Author]
   name = "sh0seo"
   bio = "Just do it."
-  avatar = "img/avatar.png"
+  avatar = "img/logo.png"
 
 [params]
   # Shown in the home page
@@ -47,7 +47,7 @@ googleAnalytics = "UA-156450601-1"
   fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [Params.logo]
-  image = "img/logo.png" # Logo image. Path relative to "static"
+  #image = "img/logo.png" # Logo image. Path relative to "static"
   title = "My Blog" # Logo title, otherwise will use site title
   subtitle = "Just do it" # Logo subtitle
 
