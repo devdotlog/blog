@@ -1,14 +1,13 @@
 ---
 title: "Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석"
 date: 2020-09-26
-draft: false
 cagegory: 
  - "flutter"
 tags:
  - "flutter"
  - "sentry"
-toc: true
 pager: true
+draft: true
 ---
 
 ![](https://sh0seo.github.io/images/dart-main.png)

@@ -100,15 +100,15 @@ googleAnalytics = "UA-156450601-1"
     url = "/post/"
     weight = 2
 
-  [[menu.main]]
-    name = "Tags"
-    url = "/tags"
-    weight = 3
+  #[[menu.main]]
+  #  name = "Tags"
+  #  url = "/tags"
+  #  weight = 3
 
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 5
+    weight = 4
 
 [social]
 github = "sh0seo"
