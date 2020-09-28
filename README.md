@@ -9,5 +9,5 @@ blog by hugo
 - [X] 소스코드가 포함된 글을 posting
 - [X] 이미지가 포함된 글을 posting
 - [X] 소스코드 하이라이팅 적용
-- [ ] mainroad theme로 변경
+- [X] mainroad theme로 변경
 - [X] main image 변경

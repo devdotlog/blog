@@ -1,9 +1,12 @@
 ---
 title: "Github Pages에서 HTTPS를 사용하지 않기"
-date: 2020-09-25T00:00:00+09:00
+date: 2020-09-25
 draft: false
-categories: github
-tags: [github, pages]
+categories: 
+ - "github"
+tags:
+ - "github"
+ - "pages"
 ---
 
 ![](https://sh0seo.github.io/images/https-main.png)

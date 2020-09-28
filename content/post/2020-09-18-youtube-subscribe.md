@@ -1,9 +1,10 @@
 ---
 title: "Youtube 구독자 100명 달성 후기"
-date: 2020-09-18T00:00:00+09:00
-draft: false
-cagegory: youtube
-tags: [youtube]
+date: 2020-09-18
+cagegory: 
+ - youtube
+tags:
+ - youtube
 ---
 
 2016년 3월 2일 클래시로얄 게임이 전세계에 출시됐었습니다. 슈퍼셀에서 만든 게임으로 기존에 없던 게임 방식으로 높은 인기를 끌었었다. 

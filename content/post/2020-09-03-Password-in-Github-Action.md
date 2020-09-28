@@ -1,9 +1,13 @@
 ---
 title: "Github Action을 이용한 빌드 & 실행에서 패스워드 숨기기"
-date: 2020-09-03T14:35:00+09:00
+date: 2020-09-03
 draft: false
-categories: go
-tags: [go, github, action]
+categories: 
+ - "go"
+tags:
+ - "go"
+ - "github"
+ - "action"
 ---
 
 ![](https://sh0seo.github.io/images/github-actions.png)

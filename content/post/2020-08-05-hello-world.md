@@ -1,7 +1,6 @@
 ---
 title: "Hello World"
-date: 2020-08-05T16:37:45+09:00
-draft: false
+date: 2020-08-05
 ---
 
 ## Hello World!

@@ -1,9 +1,12 @@
 ---
 title: "Flutter에서 모든건 Widget이다. Show/Hide까지도."
-date: 2020-09-11T02:00:00+09:00
-draft: false
-cagegory: flutter
-tags: [flutter, widget, visibility]
+date: 2020-09-11
+cagegory: 
+ - flutter
+tags: 
+ - flutter
+ - widget
+ - visibility
 ---
 
 ![](https://sh0seo.github.io/images/flutter-widget-all.png)

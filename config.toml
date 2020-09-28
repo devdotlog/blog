@@ -11,10 +11,9 @@ googleAnalytics = "UA-156450601-1"
 [Author]
   name = "sh0seo"
   bio = "Just do it."
-  avatar = "img/logo.png"
+  avatar = "img/avatar.png"
 
-[params]
-  # Shown in the home page
+[Params]
   subtitle = "개발자 블로그"
   description = "뭐라도 좀 적고, 써야 남지 않을까?"
   copyright = "sh0seo All rights reserved."
@@ -25,8 +24,8 @@ googleAnalytics = "UA-156450601-1"
   authorbox = true # Show authorbox at bottom of pages if true
   toc = true # Enable Table of Contents
   pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
-  post_meta = ["author", "date", "categories", "translations"] # Order of post meta information
-  mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
+  post_meta = ["date", "categories"] # Order of post meta information
+  #mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "2006-01-02" # Change the format of dates
   
   #mathjax = true # Enable MathJax
@@ -76,14 +75,14 @@ googleAnalytics = "UA-156450601-1"
   email = "ssh0702@gmail.com"
 
 # Custom social links
-[[Params.widgets.social.custom]]
-  title = "Youtube"
-  url = "https://youtube.com/user/username"
-  icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
+#[[Params.widgets.social.custom]]
+#  title = "Github"
+#  url = "https://youtube.com/user/username"
+#  icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
 
-[[Params.widgets.social.custom]]
-  title = "My Home Page"
-  url = "http://example.com"
+#[[Params.widgets.social.custom]]
+#  title = "My Home Page"
+#  url = "http://example.com"
   
   # show projects list
   # project list path data/projects.json

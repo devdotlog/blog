@@ -1,9 +1,14 @@
 ---
 title: "Text normalization in Go"
-date: 2020-09-01T04:15:00+09:00
-draft: false
-categories: go
-tags: [go, unicode, normalization, 유니코드, 정규화]
+date: 2020-09-01
+categories: 
+ - "go"
+tags:
+ - "go"
+ - "unicode"
+ - "normalization"
+ - "유니코드"
+ - "정규화"
 ---
 
 아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다. 

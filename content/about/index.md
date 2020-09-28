@@ -1,7 +1,9 @@
 ---
 title: "About"
-date: 2020-08-05T00:00:00+09:00
-draft: false
+toc: false
+pager: false
+authorbox: false
+comments: false
 ---
 
 # 나는 누구인가?

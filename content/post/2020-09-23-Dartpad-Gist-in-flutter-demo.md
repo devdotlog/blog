@@ -1,9 +1,12 @@
 ---
 title: "DartPad와 Gist를 이용한 Flutter UI Demo 만들기"
-date: 2020-09-22T02:19:00+09:00
-draft: false
-cagegory: flutter
-tags: [flutter, dartpad, gist]
+date: 2020-09-22
+cagegory: 
+ - flutter
+tags:
+ - flutter
+ - dartpad
+ - gist
 ---
 
 ![](https://sh0seo.github.io/images/dart-main.png)
