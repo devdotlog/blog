@@ -6,11 +6,11 @@
     <description>Recent content in go on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2020 14:35:00 +0900</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기</title>
       <link>https://sh0seo.github.io/post/2020-09-03-password-in-github-action/</link>
-      <pubDate>Thu, 03 Sep 2020 14:35:00 +0900</pubDate>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sh0seo.github.io/post/2020-09-03-password-in-github-action/</guid>
       <description>Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.
@@ -22,7 +22,7 @@ Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주�
     <item>
       <title>Text normalization in Go</title>
       <link>https://sh0seo.github.io/post/2020-09-01-text-normalization-in-go/</link>
-      <pubDate>Tue, 01 Sep 2020 04:15:00 +0900</pubDate>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sh0seo.github.io/post/2020-09-01-text-normalization-in-go/</guid>
       <description>아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다.

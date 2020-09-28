@@ -6,11 +6,11 @@
     <description>Recent content in unicode on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2020 04:15:00 +0900</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Text normalization in Go</title>
       <link>https://sh0seo.github.io/post/2020-09-01-text-normalization-in-go/</link>
-      <pubDate>Tue, 01 Sep 2020 04:15:00 +0900</pubDate>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sh0seo.github.io/post/2020-09-01-text-normalization-in-go/</guid>
       <description>아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다.

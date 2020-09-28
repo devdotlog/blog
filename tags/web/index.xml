@@ -6,11 +6,11 @@
     <description>Recent content in web on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2020 08:42:00 +0900</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flutter로 개발한 Web App을 Release 모드로 테스트하기</title>
       <link>https://sh0seo.github.io/post/2020-09-09-release-web-app-in-flutter/</link>
-      <pubDate>Wed, 09 Sep 2020 08:42:00 +0900</pubDate>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sh0seo.github.io/post/2020-09-09-release-web-app-in-flutter/</guid>
       <description>Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전에 Release 상태로 테스트를 진행해야 합니다.
