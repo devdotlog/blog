@@ -9,9 +9,9 @@ disqusShortname = "devdotlog"
 googleAnalytics = "UA-156450601-1"
 
 [Author]
-  name = "sh0seo"
+  name = "about sh0seo"
   bio = "Just do it."
-  avatar = "img/avatar.png"
+  avatar = "img/logo.jpg"
 
 [Params]
   subtitle = "개발자 블로그"
@@ -106,14 +106,9 @@ googleAnalytics = "UA-156450601-1"
     weight = 3
 
   [[menu.main]]
-    name = "Projects"
-    url = "/project/"
-    weight = 4
-
-  [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 4
+    weight = 5
 
 [social]
 github = "sh0seo"

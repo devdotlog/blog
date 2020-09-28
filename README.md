@@ -11,3 +11,5 @@ blog by hugo
 - [X] 소스코드 하이라이팅 적용
 - [X] mainroad theme로 변경
 - [X] main image 변경
+- [X] utterance -> Disqus 변경
+- [X] project 내용 변경
