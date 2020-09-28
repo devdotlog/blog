@@ -18,14 +18,5 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
 소스코드 공유 기능 부재 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 play.</description>
     </item>
     
-    <item>
-      <title>DartPad와 Gist를 이용한 Flutter UI Demo 만들기</title>
-      <link>https://sh0seo.github.io/post/2020-09-14-get-platform-in-flutter/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/post/2020-09-14-get-platform-in-flutter/</guid>
-      <description>참조  https://github.com/flutter/flutter/issues/41287  </description>
-    </item>
-    
   </channel>
 </rss>

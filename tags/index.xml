@@ -6,25 +6,7 @@
     <description>Recent content in Tags on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>flutter</title>
-      <link>https://sh0seo.github.io/tags/flutter/</link>
-      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/tags/flutter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sentry</title>
-      <link>https://sh0seo.github.io/tags/sentry/</link>
-      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/tags/sentry/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>github</title>
       <link>https://sh0seo.github.io/tags/github/</link>
@@ -49,6 +31,15 @@
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sh0seo.github.io/tags/dartpad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flutter</title>
+      <link>https://sh0seo.github.io/tags/flutter/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sh0seo.github.io/tags/flutter/</guid>
       <description></description>
     </item>
     

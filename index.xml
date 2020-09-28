@@ -6,7 +6,7 @@
     <description>Recent content on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Toy Projects</title>
       <link>https://sh0seo.github.io/project/projects/</link>
@@ -14,17 +14,6 @@
       
       <guid>https://sh0seo.github.io/project/projects/</guid>
       <description>DCCafe  https://github.com/DCBlock DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  TimeTimer  https://play.google.com/store/apps/details?id=io.animal.mouse 안드로이드 Timer App java, android  BabyLock  https://github.com/sh0seo/BabyLock 동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App java, android  역대 로또당첨번호 listing  https://sh0seo.github.com/lottery-history 역대 로또당첨번호를 전체 lising하는 페이지 golang, github action  Clash Royale Play Replay Youtube 운영&amp;quot;  https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/ Clash Royale 게임 플레이 영상 Youtube GIMP, DaVinci Resolve  DCCafe 사용자 Half-Auto 업데이트  https://github.</description>
-    </item>
-    
-    <item>
-      <title>Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석</title>
-      <link>https://sh0seo.github.io/post/sentry-error-report/</link>
-      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/post/sentry-error-report/</guid>
-      <description>dartpad.dev는 dart 언어를 직접 실행할 수 있는 REPL(read-eval-print loop) 사이트입니다. dart 개발 환경을 따로 구축하지 않고 dart 코드를 바로 실행해볼 수 있는 유용한 사이트입니다.
-Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 RUN을 클릭하면 결과를 확인할 수 있습니다.
-소스코드 공유 기능 부재 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 play.</description>
     </item>
     
     <item>
@@ -59,15 +48,6 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
 재미있었고 인기도 많았습니다. 국내외 많은 유투버들이 생기기 시작한건 그 때즘인거 같습니다. 국내에는 JUNE, 하창봉, 테드 등 30십만 이상 구독자를 보유한 유투버들도 생겼습니다.
 그래서 나는? 2018년 초반쯤 게임 인기에 게임을 시작했고 상당히 재미있게 즐기다가 다른 게임을 하면서 그만두게 되었습니다. 그러다가 2019년 말쯤에 다시 한번 시작하게되었습니다. 유투브 영상을 해보자는 심산에 즐겁게 했던 아이템으로 찾았습니다.
 사용한 툴은?</description>
-    </item>
-    
-    <item>
-      <title>DartPad와 Gist를 이용한 Flutter UI Demo 만들기</title>
-      <link>https://sh0seo.github.io/post/2020-09-14-get-platform-in-flutter/</link>
-      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/post/2020-09-14-get-platform-in-flutter/</guid>
-      <description>참조  https://github.com/flutter/flutter/issues/41287  </description>
     </item>
     
     <item>
@@ -118,19 +98,6 @@ Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주�
 &amp;quot;Sao Paulo, Brazil. Wien, Osterreich.&amp;quot;
 고민 없이 쉽게 할 수 있는 방법은 대상 문자를 찾아서 원하는 문자로 치환하는 방법입니다. 치환해야 할 문자 종류가 많지 않다면, 간단하게 적용할 수 있는 방법입니다.
 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) func main() { data := &amp;#34;São Paulo, Brazil. Wien, Österreich.&amp;#34; fmt.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://sh0seo.github.io/project/2020-08-05-hello-world/</link>
-      <pubDate>Wed, 05 Aug 2020 16:37:45 +0900</pubDate>
-      
-      <guid>https://sh0seo.github.io/project/2020-08-05-hello-world/</guid>
-      <description>Hello World! Hugo를 이용한 Static Blog testing.
-comment는 일단 disques
-여기 아래에 utterence가 나와야 하는데&amp;hellip; 되나??
-잘나오네 Good.
-그런데 누가 댓글쓰지도 않는거 달아서 뭐하나&amp;hellip; ㅎ;;</description>
     </item>
     
     <item>

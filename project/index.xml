@@ -6,7 +6,7 @@
     <description>Recent content in Projects on my blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Aug 2020 16:37:45 +0900</lastBuildDate><atom:link href="https://sh0seo.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Toy Projects</title>
       <link>https://sh0seo.github.io/project/projects/</link>
@@ -14,19 +14,6 @@
       
       <guid>https://sh0seo.github.io/project/projects/</guid>
       <description>DCCafe  https://github.com/DCBlock DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  TimeTimer  https://play.google.com/store/apps/details?id=io.animal.mouse 안드로이드 Timer App java, android  BabyLock  https://github.com/sh0seo/BabyLock 동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App java, android  역대 로또당첨번호 listing  https://sh0seo.github.com/lottery-history 역대 로또당첨번호를 전체 lising하는 페이지 golang, github action  Clash Royale Play Replay Youtube 운영&amp;quot;  https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/ Clash Royale 게임 플레이 영상 Youtube GIMP, DaVinci Resolve  DCCafe 사용자 Half-Auto 업데이트  https://github.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://sh0seo.github.io/project/2020-08-05-hello-world/</link>
-      <pubDate>Wed, 05 Aug 2020 16:37:45 +0900</pubDate>
-      
-      <guid>https://sh0seo.github.io/project/2020-08-05-hello-world/</guid>
-      <description>Hello World! Hugo를 이용한 Static Blog testing.
-comment는 일단 disques
-여기 아래에 utterence가 나와야 하는데&amp;hellip; 되나??
-잘나오네 Good.
-그런데 누가 댓글쓰지도 않는거 달아서 뭐하나&amp;hellip; ㅎ;;</description>
     </item>
     
   </channel>
