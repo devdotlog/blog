@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>My Toy Projects</title>
+      <link>https://sh0seo.github.io/project/projects/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sh0seo.github.io/project/projects/</guid>
+      <description>DCCafe  https://github.com/DCBlock DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  TimeTimer  https://play.google.com/store/apps/details?id=io.animal.mouse 안드로이드 Timer App java, android  BabyLock  https://github.com/sh0seo/BabyLock 동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App java, android  역대 로또당첨번호 listing  https://sh0seo.github.com/lottery-history 역대 로또당첨번호를 전체 lising하는 페이지 golang, github action  Clash Royale Play Replay Youtube 운영&amp;quot;  https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/ Clash Royale 게임 플레이 영상 Youtube GIMP, DaVinci Resolve  DCCafe 사용자 Half-Auto 업데이트  https://github.</description>
+    </item>
+    
+    <item>
       <title>Flutter Web 프로젝트에 Sentry 에러 리포팅 추가 및 분석</title>
       <link>https://sh0seo.github.io/post/sentry-error-report/</link>
       <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
