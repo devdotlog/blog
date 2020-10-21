@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on my side projects</title>
-    <link>https://sh0seo.github.io/post/</link>
+    <link>https://sh0seo.github.io/posts/</link>
     <description>Recent content in Posts on my side projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sh0seo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sh0seo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -16,10 +16,10 @@
     
     <item>
       <title>Github Pages에서 HTTPS를 사용하지 않기</title>
-      <link>https://sh0seo.github.io/post/2020-09-08-disable-https-in-github-pages/</link>
+      <link>https://sh0seo.github.io/github-pages%EC%97%90%EC%84%9C-https%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EA%B8%B0/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-09-08-disable-https-in-github-pages/</guid>
+      <guid>https://sh0seo.github.io/github-pages%EC%97%90%EC%84%9C-https%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EA%B8%B0/</guid>
       <description>Github Pages는 정적 웹사이트를 제공하는 기능입니다. Github 계정명.github.io 도메인을 자동으로 사용할 수 있는 괜찮은 서비스입니다. 기본적으로 jekyll을 이용하여 서비스를 제공합니다.
 계정명.github.io URL은 default로 https를 활성화 상태로 제공이 됩니다. setting으로 이동해서 보면 아래와 같이 Github Pages에 대한 설정을 변경할 수 있습니다.
 https를 사용하고 싶지 않다면? 만약, default로 제공되는 https를 사용하지 않는다면 어떻게 해야 할까요? default로 https를 제공하지만 계정명.github.io URL를 사용한다면 무조건 HTTPS 상태가 강제됩니다. 아래와 같이 setting -&amp;gt; Github Pages -&amp;gt; Enforce HTTPS는 설정을 변경할 수 없는 상태로 제공됩니다.</description>
@@ -29,10 +29,10 @@ https를 사용하고 싶지 않다면? 만약, default로 제공되는 https를
     
     <item>
       <title>DartPad와 Gist를 이용한 Flutter UI Demo 만들기</title>
-      <link>https://sh0seo.github.io/post/2020-09-23-dartpad-gist-in-flutter-demo/</link>
+      <link>https://sh0seo.github.io/dartpad%EC%99%80-gist%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-flutter-ui-demo-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-09-23-dartpad-gist-in-flutter-demo/</guid>
+      <guid>https://sh0seo.github.io/dartpad%EC%99%80-gist%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-flutter-ui-demo-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>dartpad.dev는 dart 언어를 직접 실행할 수 있는 REPL(read-eval-print loop) 사이트입니다. dart 개발 환경을 따로 구축하지 않고 dart 코드를 바로 실행해볼 수 있는 유용한 사이트입니다.
 Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 RUN을 클릭하면 결과를 확인할 수 있습니다.
 소스코드 공유 기능 부재 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 play.</description>
@@ -42,10 +42,10 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
     
     <item>
       <title>Youtube 구독자 100명 달성 후기</title>
-      <link>https://sh0seo.github.io/post/2020-09-18-youtube-subscribe/</link>
+      <link>https://sh0seo.github.io/youtube-%EA%B5%AC%EB%8F%85%EC%9E%90-100%EB%AA%85-%EB%8B%AC%EC%84%B1-%ED%9B%84%EA%B8%B0/</link>
       <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-09-18-youtube-subscribe/</guid>
+      <guid>https://sh0seo.github.io/youtube-%EA%B5%AC%EB%8F%85%EC%9E%90-100%EB%AA%85-%EB%8B%AC%EC%84%B1-%ED%9B%84%EA%B8%B0/</guid>
       <description>2016년 3월 2일 클래시로얄 게임이 전세계에 출시됐었습니다. 슈퍼셀에서 만든 게임으로 기존에 없던 게임 방식으로 높은 인기를 끌었었다.
 재미있었고 인기도 많았습니다. 국내외 많은 유투버들이 생기기 시작한건 그 때즘인거 같습니다. 국내에는 JUNE, 하창봉, 테드 등 30십만 이상 구독자를 보유한 유투버들도 생겼습니다.
 그래서 나는? 2018년 초반쯤 게임 인기에 게임을 시작했고 상당히 재미있게 즐기다가 다른 게임을 하면서 그만두게 되었습니다. 그러다가 2019년 말쯤에 다시 한번 시작하게되었습니다. 유투브 영상을 해보자는 심산에 즐겁게 했던 아이템으로 찾았습니다.
@@ -56,10 +56,10 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
     
     <item>
       <title>Flutter에서 모든건 Widget이다. Show/Hide까지도.</title>
-      <link>https://sh0seo.github.io/post/2020-09-08-visibility-in-flutter/</link>
+      <link>https://sh0seo.github.io/flutter%EC%97%90%EC%84%9C-%EB%AA%A8%EB%93%A0%EA%B1%B4-widget%EC%9D%B4%EB%8B%A4.-show/hide%EA%B9%8C%EC%A7%80%EB%8F%84./</link>
       <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-09-08-visibility-in-flutter/</guid>
+      <guid>https://sh0seo.github.io/flutter%EC%97%90%EC%84%9C-%EB%AA%A8%EB%93%A0%EA%B1%B4-widget%EC%9D%B4%EB%8B%A4.-show/hide%EA%B9%8C%EC%A7%80%EB%8F%84./</guid>
       <description>flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 Text부터, 다른 Widget을 담기 위한 Container까지도 모두 Widget입니다. 한마디로 사용자에게 보이든, 보이지 않든 화면을 구성하는 모든 것은 Widget입니다.
 그리고 한발 더 나아가서 Widget 자체의 Show, Hide 까지도 별도의 Widget(Visibility)입니다.
 다른 UI에서 Visibility UI를 다루는 다른 프레임워크를 보면 일반적으로 A라는 컴포넌트를 사용자에게 Show, Hide 처리하는 것은 그 컴포넌트 자체에서 show(), hide() 함수(혹은 메소드)를 제공하거나 투명도를 0으로 설정하여 처리하곤합니다. 예를 들어 안드로이드에서 TextView는 xml에서 visibility를 설정할 수 있습니다.</description>
@@ -69,10 +69,10 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
     
     <item>
       <title>Flutter로 개발한 Web App을 Release 모드로 테스트하기</title>
-      <link>https://sh0seo.github.io/post/2020-09-09-release-web-app-in-flutter/</link>
+      <link>https://sh0seo.github.io/flutter%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%9C-web-app%EC%9D%84-release-%EB%AA%A8%EB%93%9C%EB%A1%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0/</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-09-09-release-web-app-in-flutter/</guid>
+      <guid>https://sh0seo.github.io/flutter%EB%A1%9C-%EA%B0%9C%EB%B0%9C%ED%95%9C-web-app%EC%9D%84-release-%EB%AA%A8%EB%93%9C%EB%A1%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EA%B8%B0/</guid>
       <description>Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전에 Release 상태로 테스트를 진행해야 합니다.
 테스트는 아래와 같은 순서로 진행합니다.
  Web App을 Release 모드로 build Web Server 실행 테스트  Release 모드로 build 대상 프로젝트로 이동하고 command 라인에서 다음 명령을 실행하여 빌드합니다.
@@ -84,10 +84,10 @@ Web Server 실행 빌드된 소스는 정적 웹페이지 리소스입니다.</d
     
     <item>
       <title>Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기</title>
-      <link>https://sh0seo.github.io/post/2020-09-03-password-in-github-action/</link>
+      <link>https://sh0seo.github.io/github-action%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B9%8C%EB%93%9C-%EC%8B%A4%ED%96%89%EC%97%90%EC%84%9C-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EC%88%A8%EA%B8%B0%EA%B8%B0/</link>
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-09-03-password-in-github-action/</guid>
+      <guid>https://sh0seo.github.io/github-action%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B9%8C%EB%93%9C-%EC%8B%A4%ED%96%89%EC%97%90%EC%84%9C-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EC%88%A8%EA%B8%B0%EA%B8%B0/</guid>
       <description>Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.
 Github Actions을 이용하면 hugo blog 빌드 &amp;amp; 배포, cron을 이용한 반복적인 업무 자동화도 할 수 있습니다.
 Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주일에 한번씩 DB를 업데이트 해야하는 일이 있다고 가정합니다.
@@ -98,10 +98,10 @@ Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주�
     
     <item>
       <title>Hello World</title>
-      <link>https://sh0seo.github.io/post/2020-08-05-hello-world/</link>
+      <link>https://sh0seo.github.io/hello-world/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-08-05-hello-world/</guid>
+      <guid>https://sh0seo.github.io/hello-world/</guid>
       <description>Hello World! Hugo를 이용한 Static Blog testing.
 comment는 일단 disques
 여기 아래에 utterence가 나와야 하는데&amp;hellip; 되나??
