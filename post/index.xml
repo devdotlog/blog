@@ -78,20 +78,6 @@ Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주�
     </item>
     
     <item>
-      <title>Text normalization in Go</title>
-      <link>https://sh0seo.github.io/post/2020-09-01-text-normalization-in-go/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/post/2020-09-01-text-normalization-in-go/</guid>
-      <description>아래와 같이 특수 문자가 섞여 있는 문자열이 있습니다.
-&amp;quot;São Paulo, Brazil. Wien, Österreich.&amp;quot;
-이런 문자열을 아래와 같이 알파벳으로 변경하고 싶다면 어떻게 해야 할까요?
-&amp;quot;Sao Paulo, Brazil. Wien, Osterreich.&amp;quot;
-고민 없이 쉽게 할 수 있는 방법은 대상 문자를 찾아서 원하는 문자로 치환하는 방법입니다. 치환해야 할 문자 종류가 많지 않다면, 간단하게 적용할 수 있는 방법입니다.
-package main import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) func main() { data := &amp;#34;São Paulo, Brazil. Wien, Österreich.&amp;#34; fmt.</description>
-    </item>
-    
-    <item>
       <title>Hello World</title>
       <link>https://sh0seo.github.io/post/2020-08-05-hello-world/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>

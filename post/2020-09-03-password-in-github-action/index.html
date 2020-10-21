@@ -319,15 +319,15 @@ Github Action을 사용하기 위해서는 아래의 위치에 yml로 작성한 
         <span style="color:#f92672">go-version</span>: <span style="color:#e6db74">&#34;1.13&#34;</span>
     
     - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pg driver</span>
-      <span style="color:#f92672">run</span>: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">        go get github.com/lib/pq
-</span><span style="color:#e6db74">    - name: run 
-</span><span style="color:#e6db74">      run: |
-</span><span style="color:#e6db74">        go run main.go
-</span><span style="color:#e6db74">      env:
-</span><span style="color:#e6db74">        DB_HOST: ${{ secrets.DB_HOST}}
-</span><span style="color:#e6db74">        DB_PW: ${{ secrets.DB_PW}}
-</span></code></pre></div><h2 id="환경정보는-secrets에-저장">환경정보는 secrets에 저장</h2>
+      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">        </span>        <span style="color:#ae81ff">go get github.com/lib/pq</span>
+    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">run </span>
+      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">        </span>        <span style="color:#ae81ff">go run main.go</span>
+      <span style="color:#f92672">env</span>:
+        <span style="color:#f92672">DB_HOST</span>: <span style="color:#ae81ff">${{ secrets.DB_HOST}}</span>
+        <span style="color:#f92672">DB_PW</span>: <span style="color:#ae81ff">${{ secrets.DB_PW}}</span>
+</code></pre></div><h2 id="환경정보는-secrets에-저장">환경정보는 secrets에 저장</h2>
 <p>소스코드를 실행하기 위해 필요한 DB 접속정보는 공개되면 안되기 때문에 환경설정에서 읽어서 처리하도록 합니다. Github Action에서 환경설정에 특정 값을 설정하기 위해서는 <code>env</code>에 설정을 합니다. 아래 스크립트의 의미는 secrets.DB_HOST에 설정된 값을 DB_HOST 환경변수에 저장하겠다는 의미입니다.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">      <span style="color:#f92672">env</span>:
         <span style="color:#f92672">DB_HOST</span>: <span style="color:#ae81ff">${{ secrets.DB_HOST}}</span>
@@ -369,7 +369,7 @@ Github Action을 사용하기 위해서는 아래의 위치에 yml로 작성한 
 		<img alt="about sh0seo avatar" src="/img/logo.jpg" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About about sh0seo</span>
+		<span class="authorbox__name"></span>
 	</div>
 	<div class="authorbox__description">
 		Just do it.
@@ -378,9 +378,9 @@ Github Action을 사용하기 위해서는 아래의 위치에 yml로 작성한 
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/post/2020-09-01-text-normalization-in-go/" rel="prev">
+		<a class="pager__link" href="/post/2020-08-05-hello-world/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Text normalization in Go</p>
+			<p class="pager__title">Hello World</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
