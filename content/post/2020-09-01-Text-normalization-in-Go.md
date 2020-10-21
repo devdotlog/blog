@@ -1,6 +1,7 @@
 ---
 title: "Text normalization in Go"
 date: 2020-09-01
+draft: true
 categories: 
  - "go"
 tags:
