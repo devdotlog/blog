@@ -1,146 +1,33 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기 - my blog</title>
-	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
-		<meta property="og:title" content="Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기" />
-<meta property="og:description" content="Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.
-Github Actions을 이용하면 hugo blog 빌드 &amp; 배포, cron을 이용한 반복적인 업무 자동화도 할 수 있습니다.
-Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주일에 한번씩 DB를 업데이트 해야하는 일이 있다고 가정합니다.
- 사용하는 DB용 클라이언트를 실행 login/password로 로그인 업데이트 query를 수행하기 위한 데이터 확인 Query를 실행 잊지 않고 정해진 요일에 반복 수행  아마도 개발자는 위와 같은 단계를 반복적으로 수행하게 됩니다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://sh0seo.github.io/post/2020-09-03-password-in-github-action/" />
-<meta property="article:published_time" content="2020-09-03T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-09-03T00:00:00+00:00" />
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="뭐라도 좀 적고, 써야 남지 않을까?">
+    
+    <link rel="shortcut icon" href="https://sh0seo.github.io/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
 
-		<meta itemprop="name" content="Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기">
-<meta itemprop="description" content="Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.
-Github Actions을 이용하면 hugo blog 빌드 &amp; 배포, cron을 이용한 반복적인 업무 자동화도 할 수 있습니다.
-Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주일에 한번씩 DB를 업데이트 해야하는 일이 있다고 가정합니다.
- 사용하는 DB용 클라이언트를 실행 login/password로 로그인 업데이트 query를 수행하기 위한 데이터 확인 Query를 실행 잊지 않고 정해진 요일에 반복 수행  아마도 개발자는 위와 같은 단계를 반복적으로 수행하게 됩니다.">
-<meta itemprop="datePublished" content="2020-09-03T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-09-03T00:00:00+00:00" />
-<meta itemprop="wordCount" content="781">
-
-
-
-<meta itemprop="keywords" content="go,github,action," />
-
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기"/>
-<meta name="twitter:description" content="Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.
-Github Actions을 이용하면 hugo blog 빌드 &amp; 배포, cron을 이용한 반복적인 업무 자동화도 할 수 있습니다.
-Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주일에 한번씩 DB를 업데이트 해야하는 일이 있다고 가정합니다.
- 사용하는 DB용 클라이언트를 실행 login/password로 로그인 업데이트 query를 수행하기 위한 데이터 확인 Query를 실행 잊지 않고 정해진 요일에 반복 수행  아마도 개발자는 위와 같은 단계를 반복적으로 수행하게 됩니다."/>
-
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
-
-	<link rel="stylesheet" href="/css/style.css">
-	
-
-	<link rel="shortcut icon" href="/favicon.ico">
-		
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-156450601-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
+    <title>Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기</title>
 </head>
-<body class="body">
-	<div class="container container--outer">
-		<header class="header">
-	<div class="container header__container">
-		
-	<div class="logo">
-		<a class="logo__link" href="/" title="My Blog" rel="home">
-			<div class="logo__item logo__text">
-					<div class="logo__title">My Blog</div>
-					<div class="logo__tagline">Just do it</div>
-				</div>
-		</a>
-	</div>
-		
-<nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/">
-				
-				<span class="menu__text">Home</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/post/">
-				
-				<span class="menu__text">All posts</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/project/projects/">
-				
-				<span class="menu__text">My Toy Projects</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About</span>
-				
-			</a>
-		</li>
-	</ul>
-</nav>
-
-	</div>
+<body><header id="banner">
+    <h2><a href="https://sh0seo.github.io/">my side projects</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/project/projects/" title="My Toy Projects">My Toy Projects</a>
+            </li><li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
 </header>
-		<div class="wrapper flex">
-			<div class="primary">
-			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기</h1>
-			<div class="post__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-03T00:00:00Z">2020-09-03</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/go/" rel="category">go</a>
-	</span>
-</div></div>
-		</header>
-<div class="post__toc toc">
-	<div class="toc__title">Page content</div>
-	<div class="toc__menu">
-		<nav id="TableOfContents">
-  <ul>
-    <li><a href="#github-actions을-이용해서-db-데이터-업데이트하기">Github Actions을 이용해서 DB 데이터 업데이트하기</a></li>
-    <li><a href="#postgresql-db의-특정-컬럼의-데이터를-업데이트-하는-golang-code">Postgresql DB의 특정 컬럼의 데이터를 업데이트 하는 golang code</a></li>
-    <li><a href="#github-action에서-cron--build--execute-스크립트">Github Action에서 cron / build / execute 스크립트</a></li>
-    <li><a href="#환경정보는-secrets에-저장">환경정보는 secrets에 저장</a></li>
-    <li><a href="#결론">결론</a></li>
-    <li><a href="#참조">참조</a></li>
-  </ul>
-</nav>
-	</div>
-</div>
-<div class="content post__content clearfix">
-			<p><img src="https://sh0seo.github.io/images/github-actions.png" alt=""></p>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기</h1><time>September 3, 2020</time></header><p><img src="https://sh0seo.github.io/images/github-actions.png" alt=""></p>
 <p>Github에는 Actions라는 기능이 있습니다. Travis CI 처럼 소스코드를 이용해서 build, test, deploy 등의 기능을 수행할 수 있는 서비스입니다.</p>
 <p>Github Actions을 이용하면 hugo blog 빌드 &amp; 배포, cron을 이용한 반복적인 업무 자동화도 할 수 있습니다.</p>
 <h2 id="github-actions을-이용해서-db-데이터-업데이트하기">Github Actions을 이용해서 DB 데이터 업데이트하기</h2>
@@ -173,111 +60,111 @@ if (!doNotTrack) {
 <li>등록된 사용자인지 확인한다.</li>
 <li>카드 번호를 hash 한 값을 DB에 업데이트 한다.</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;crypto/sha256&#34;</span>
-	<span style="color:#e6db74">&#34;database/sql&#34;</span>
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
-	<span style="color:#e6db74">&#34;os&#34;</span>
-	<span style="color:#e6db74">&#34;time&#34;</span>
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;crypto/sha256&#34;</span>
+	<span class="s">&#34;database/sql&#34;</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;os&#34;</span>
+	<span class="s">&#34;time&#34;</span>
 
-	<span style="color:#a6e22e">_</span> <span style="color:#e6db74">&#34;github.com/lib/pq&#34;</span>
-)
+	<span class="nx">_</span> <span class="s">&#34;github.com/lib/pq&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;DCCafe User RFID Update&#34;</span>)
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;DCCafe User RFID Update&#34;</span><span class="p">)</span>
 
-	<span style="color:#75715e">// input
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">name</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;홍길동&#34;</span>
-	<span style="color:#75715e">// input
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">cardNumber</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;3255213734&#34;</span>
+	<span class="c1">// input
+</span><span class="c1"></span>	<span class="nx">name</span> <span class="o">:=</span> <span class="s">&#34;홍길동&#34;</span>
+	<span class="c1">// input
+</span><span class="c1"></span>	<span class="nx">cardNumber</span> <span class="o">:=</span> <span class="s">&#34;3255213734&#34;</span>
 
-	<span style="color:#a6e22e">dbHost</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;DB_HOST&#34;</span>) <span style="color:#75715e">// 로컬에서 개발 시에는 환경변수 DB_HOST에 등록
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">dbPassword</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Getenv</span>(<span style="color:#e6db74">&#34;DB_PW&#34;</span>) <span style="color:#75715e">// 로컬에서 개발 시에는 환경변수 DB_PW에 패스워드 등록
-</span><span style="color:#75715e"></span>
-	<span style="color:#a6e22e">conn</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;user=dcadmin password=%s host=%s dbname=dcadmin sslmode=disable&#34;</span>
+	<span class="nx">dbHost</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Getenv</span><span class="p">(</span><span class="s">&#34;DB_HOST&#34;</span><span class="p">)</span> <span class="c1">// 로컬에서 개발 시에는 환경변수 DB_HOST에 등록
+</span><span class="c1"></span>	<span class="nx">dbPassword</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Getenv</span><span class="p">(</span><span class="s">&#34;DB_PW&#34;</span><span class="p">)</span> <span class="c1">// 로컬에서 개발 시에는 환경변수 DB_PW에 패스워드 등록
+</span><span class="c1"></span>
+	<span class="nx">conn</span> <span class="o">:=</span> <span class="s">&#34;user=dcadmin password=%s host=%s dbname=dcadmin sslmode=disable&#34;</span>
 
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">name</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;[Error] user empty\n&#34;</span>)
-		<span style="color:#66d9ef">return</span>
-	}
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;[Error] user empty\n&#34;</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">cardNumber</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;[Error] Card Number empty\n&#34;</span>)
-		<span style="color:#66d9ef">return</span>
-	}
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">cardNumber</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;[Error] Card Number empty\n&#34;</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">dbHost</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;[Error] Not find DB HOST\n&#34;</span>)
-		<span style="color:#66d9ef">return</span>
-	}
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">dbHost</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;[Error] Not find DB HOST\n&#34;</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	<span style="color:#66d9ef">if</span> len(<span style="color:#a6e22e">dbPassword</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;[Error] Not find DB Password\n&#34;</span>)
-		<span style="color:#66d9ef">return</span>
-	}
+	<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">dbPassword</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;[Error] Not find DB Password\n&#34;</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	<span style="color:#a6e22e">db</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sql</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#e6db74">&#34;postgres&#34;</span>, <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#a6e22e">conn</span>, <span style="color:#a6e22e">dbPassword</span>, <span style="color:#a6e22e">dbHost</span>))
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">err</span>)
-	}
-	<span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Close</span>()
+	<span class="nx">db</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">sql</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="s">&#34;postgres&#34;</span><span class="p">,</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="nx">conn</span><span class="p">,</span> <span class="nx">dbPassword</span><span class="p">,</span> <span class="nx">dbHost</span><span class="p">))</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="k">defer</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
 
-	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">status</span> <span style="color:#66d9ef">int</span>
-	<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">QueryRow</span>(<span style="color:#e6db74">&#34;SELECT 1&#34;</span>).<span style="color:#a6e22e">Scan</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">status</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">err</span>)
-	}
+	<span class="kd">var</span> <span class="nx">status</span> <span class="kt">int</span>
+	<span class="nx">err</span> <span class="p">=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">QueryRow</span><span class="p">(</span><span class="s">&#34;SELECT 1&#34;</span><span class="p">).</span><span class="nf">Scan</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">status</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
 
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">status</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> {
-		panic(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;SELECT 1 is not %d\n&#34;</span>, <span style="color:#a6e22e">status</span>))
-	}
+	<span class="k">if</span> <span class="nx">status</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;SELECT 1 is not %d\n&#34;</span><span class="p">,</span> <span class="nx">status</span><span class="p">))</span>
+	<span class="p">}</span>
 
-	<span style="color:#75715e">// get User
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">Users</span>
-	<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">QueryRow</span>(<span style="color:#e6db74">`SELECT email, rfid, company, index, name, leave, regdate, updatedate FROM users WHERE name = $1`</span>, <span style="color:#a6e22e">name</span>).<span style="color:#a6e22e">Scan</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">email</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">rfid</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">company</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">index</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">leave</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">regdate</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">updatedate</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">err</span>)
-	}
+	<span class="c1">// get User
+</span><span class="c1"></span>	<span class="kd">var</span> <span class="nx">user</span> <span class="nx">Users</span>
+	<span class="nx">err</span> <span class="p">=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">QueryRow</span><span class="p">(</span><span class="s">`SELECT email, rfid, company, index, name, leave, regdate, updatedate FROM users WHERE name = $1`</span><span class="p">,</span> <span class="nx">name</span><span class="p">).</span><span class="nf">Scan</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">rfid</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">company</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">index</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">leave</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">regdate</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">user</span><span class="p">.</span><span class="nx">updatedate</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
 
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;find user %s\n&#34;</span>, <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>)
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;find user %s\n&#34;</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
 
-	<span style="color:#a6e22e">rfid</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">hash</span>(<span style="color:#a6e22e">cardNumber</span>)
+	<span class="nx">rfid</span> <span class="o">:=</span> <span class="nf">hash</span><span class="p">(</span><span class="nx">cardNumber</span><span class="p">)</span>
 
-	<span style="color:#a6e22e">status</span> = <span style="color:#ae81ff">0</span>
-	<span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">QueryRow</span>(<span style="color:#e6db74">`SELECT 1 FROM users WHERE rfid = $1`</span>, <span style="color:#a6e22e">rfid</span>).<span style="color:#a6e22e">Scan</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">status</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;[Error] Exist Card Number:%s\n&#34;</span>, <span style="color:#a6e22e">cardNumber</span>)
-		<span style="color:#66d9ef">return</span>
-	}
+	<span class="nx">status</span> <span class="p">=</span> <span class="mi">0</span>
+	<span class="nx">err</span> <span class="p">=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">QueryRow</span><span class="p">(</span><span class="s">`SELECT 1 FROM users WHERE rfid = $1`</span><span class="p">,</span> <span class="nx">rfid</span><span class="p">).</span><span class="nf">Scan</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">status</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;[Error] Exist Card Number:%s\n&#34;</span><span class="p">,</span> <span class="nx">cardNumber</span><span class="p">)</span>
+		<span class="k">return</span>
+	<span class="p">}</span>
 
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Get new RFID %s\n&#34;</span>, <span style="color:#a6e22e">rfid</span>)
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Get new RFID %s\n&#34;</span><span class="p">,</span> <span class="nx">rfid</span><span class="p">)</span>
 
-	<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Exec</span>(<span style="color:#e6db74">`UPDATE users SET rfid = $1, updatedate = now() WHERE index = $2`</span>, <span style="color:#a6e22e">rfid</span>, <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">index</span>)
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">err</span>)
-	}
+	<span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">db</span><span class="p">.</span><span class="nf">Exec</span><span class="p">(</span><span class="s">`UPDATE users SET rfid = $1, updatedate = now() WHERE index = $2`</span><span class="p">,</span> <span class="nx">rfid</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">index</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
 
-	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;Update User: %s, CardNumber: %s\n&#34;</span>, <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">cardNumber</span>)
-}
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Update User: %s, CardNumber: %s\n&#34;</span><span class="p">,</span> <span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">cardNumber</span><span class="p">)</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">hash</span>(<span style="color:#a6e22e">cardNumber</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">string</span> {
-	<span style="color:#a6e22e">sum</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sha256</span>.<span style="color:#a6e22e">Sum256</span>([]byte(<span style="color:#a6e22e">cardNumber</span>))
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Sprintf</span>(<span style="color:#e6db74">&#34;%x&#34;</span>, <span style="color:#a6e22e">sum</span>)
-}
+<span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span><span class="nx">cardNumber</span> <span class="kt">string</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="nx">sum</span> <span class="o">:=</span> <span class="nx">sha256</span><span class="p">.</span><span class="nf">Sum256</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">cardNumber</span><span class="p">))</span>
+	<span class="k">return</span> <span class="nx">fmt</span><span class="p">.</span><span class="nf">Sprintf</span><span class="p">(</span><span class="s">&#34;%x&#34;</span><span class="p">,</span> <span class="nx">sum</span><span class="p">)</span>
+<span class="p">}</span>
 
-<span style="color:#75715e">// Users DB
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Users</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">email</span>      <span style="color:#66d9ef">string</span> <span style="color:#75715e">// PK
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">rfid</span>       <span style="color:#66d9ef">string</span> <span style="color:#75715e">// PK
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">company</span>    <span style="color:#66d9ef">string</span>
-	<span style="color:#a6e22e">index</span>      <span style="color:#66d9ef">int</span>
-	<span style="color:#a6e22e">name</span>       <span style="color:#66d9ef">string</span>
-	<span style="color:#a6e22e">leave</span>      <span style="color:#66d9ef">bool</span>
-	<span style="color:#a6e22e">regdate</span>    <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>
-	<span style="color:#a6e22e">updatedate</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>
-}
+<span class="c1">// Users DB
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Users</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">email</span>      <span class="kt">string</span> <span class="c1">// PK
+</span><span class="c1"></span>	<span class="nx">rfid</span>       <span class="kt">string</span> <span class="c1">// PK
+</span><span class="c1"></span>	<span class="nx">company</span>    <span class="kt">string</span>
+	<span class="nx">index</span>      <span class="kt">int</span>
+	<span class="nx">name</span>       <span class="kt">string</span>
+	<span class="nx">leave</span>      <span class="kt">bool</span>
+	<span class="nx">regdate</span>    <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span>
+	<span class="nx">updatedate</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Time</span>
+<span class="p">}</span>
 </code></pre></div><p>로컬에서 테스트하여 정상적으로 동작하는 소스코드는 gihub 프로젝트에 push 합니다.</p>
 <h2 id="github-action에서-cron--build--execute-스크립트">Github Action에서 cron / build / execute 스크립트</h2>
 <p>자동 실행을 위한 Github Action용 스크립트를 작성합니다.
@@ -297,42 +184,42 @@ Github Action을 사용하기 위해서는 아래의 위치에 yml로 작성한 
 </code></pre><p>그리고 Github Action 스크립트는 소스코드와 달리 github site에서 직접 수정하는 것이 도움이 됩니다. github site의 에디터에서 직접 수정을 하면 cron의 경우 아래와 같이 시간에 대한 정보를 확인할 수 있습니다.</p>
 <p><img src="https://sh0seo.github.io/images/cron-preview.png" alt=""></p>
 <p>전체 스크립트는 아래와 같습니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">update</span>
-
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>: [ <span style="color:#ae81ff">master ]</span>
-  <span style="color:#f92672">schedule</span>:
-    - <span style="color:#f92672">cron</span>:  <span style="color:#e6db74">&#39;0 9 * * SUN&#39;</span>
-      
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">build</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
-    <span style="color:#f92672">steps</span>:
-    - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2.3.2</span>
-      <span style="color:#f92672">with</span>:
-        <span style="color:#f92672">ref</span>: <span style="color:#e6db74">&#34;master&#34;</span>
-    
-    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">go setup</span>
-      <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-go@v2.1.2</span>
-      <span style="color:#f92672">with</span>:
-        <span style="color:#f92672">go-version</span>: <span style="color:#e6db74">&#34;1.13&#34;</span>
-    
-    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pg driver</span>
-      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
-</span><span style="color:#e6db74">        </span>        <span style="color:#ae81ff">go get github.com/lib/pq</span>
-    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">run </span>
-      <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
-</span><span style="color:#e6db74">        </span>        <span style="color:#ae81ff">go run main.go</span>
-      <span style="color:#f92672">env</span>:
-        <span style="color:#f92672">DB_HOST</span>: <span style="color:#ae81ff">${{ secrets.DB_HOST}}</span>
-        <span style="color:#f92672">DB_PW</span>: <span style="color:#ae81ff">${{ secrets.DB_PW}}</span>
-</code></pre></div><h2 id="환경정보는-secrets에-저장">환경정보는 secrets에 저장</h2>
+<div class="highlight"><pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">update</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">on</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="l">master ]</span><span class="w">
+</span><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">cron</span><span class="p">:</span><span class="w">  </span><span class="s1">&#39;0 9 * * SUN&#39;</span><span class="w">
+</span><span class="w">      
+</span><span class="w"></span><span class="nt">jobs</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">build</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l">ubuntu-latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">steps</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/checkout@v2.3.2</span><span class="w">
+</span><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">ref</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;master&#34;</span><span class="w">
+</span><span class="w">    
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">go setup</span><span class="w">
+</span><span class="w">      </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">actions/setup-go@v2.1.2</span><span class="w">
+</span><span class="w">      </span><span class="nt">with</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">go-version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;1.13&#34;</span><span class="w">
+</span><span class="w">    
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">pg driver</span><span class="w">
+</span><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span><span class="sd">        </span><span class="w">        </span><span class="l">go get github.com/lib/pq</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">run </span><span class="w">
+</span><span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span><span class="sd">        </span><span class="w">        </span><span class="l">go run main.go</span><span class="w">
+</span><span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.DB_HOST}}</span><span class="w">
+</span><span class="w">        </span><span class="nt">DB_PW</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.DB_PW}}</span><span class="w">
+</span></code></pre></div><h2 id="환경정보는-secrets에-저장">환경정보는 secrets에 저장</h2>
 <p>소스코드를 실행하기 위해 필요한 DB 접속정보는 공개되면 안되기 때문에 환경설정에서 읽어서 처리하도록 합니다. Github Action에서 환경설정에 특정 값을 설정하기 위해서는 <code>env</code>에 설정을 합니다. 아래 스크립트의 의미는 secrets.DB_HOST에 설정된 값을 DB_HOST 환경변수에 저장하겠다는 의미입니다.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">      <span style="color:#f92672">env</span>:
-        <span style="color:#f92672">DB_HOST</span>: <span style="color:#ae81ff">${{ secrets.DB_HOST}}</span>
-        <span style="color:#f92672">DB_PW</span>: <span style="color:#ae81ff">${{ secrets.DB_PW}}</span>
-</code></pre></div><p>그렇다면 <code>${{ secrets.XXXXX }}</code> 값은 어디에서 설정하면 될까요? github의 해당 프로젝트의 setting 에서 관리할 수 있습니다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-yml" data-lang="yml"><span class="w">      </span><span class="nt">env</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">DB_HOST</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.DB_HOST}}</span><span class="w">
+</span><span class="w">        </span><span class="nt">DB_PW</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.DB_PW}}</span><span class="w">
+</span></code></pre></div><p>그렇다면 <code>${{ secrets.XXXXX }}</code> 값은 어디에서 설정하면 될까요? github의 해당 프로젝트의 setting 에서 관리할 수 있습니다.</p>
 <p><img src="https://sh0seo.github.io/images/secrets-value.png" alt=""></p>
 <h2 id="결론">결론</h2>
 <p>Github Action 기능을 이용하여 golang 소스코드를 실행하는 기능을 만들었습니다. Travis CI에서 처리했던것 보다는 좀 더 github 친화적이라서 사용하기도 편하고, 특별한 서버 없이도 수행할 수 있는 장점이 있습니다. 저 같은 경우는 cron 기능, DB 업데이트 등을 모두 golang + github action으로 처리하고 있습니다. 좋은 기능은 역시 자주 사용해서 잊어먹지 않아야하고 이렇게 공유해야 합니다. ^^;</p>
@@ -342,92 +229,10 @@ Github Action을 사용하기 위해서는 아래의 위치에 yml로 작성한 
 <li><a href="https://pkg.go.dev/database/sql?tab=doc">Golang sql</a></li>
 <li><a href="https://docs.github.com/en/actions">Github Action</a></li>
 </ul>
+</article>
 
-		</div>
-		<footer class="post__footer">
-			
-<div class="post__tags tags clearfix">
-	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/go/" rel="tag">go</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/github/" rel="tag">github</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/action/" rel="tag">action</a>
-		</li>
-	</ul>
-</div>
-		</footer>
-	</article>
-</main>
-
-<div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="about sh0seo avatar" src="/img/logo.jpg" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name"></span>
-	</div>
-	<div class="authorbox__description">
-		Just do it.
-	</div>
-</div>
-
-<nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/post/2020-08-05-hello-world/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Hello World</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/post/2020-09-09-release-web-app-in-flutter/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Flutter로 개발한 Web App을 Release 모드로 테스트하기</p>
-		</a>
-	</div>
-</nav>
-
-<section class="comments">
-	<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "devdotlog" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
-			</div>
-			
-		</div>
-		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2020 sh0seo All rights reserved..
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+        </main><footer id="footer">
+    sh0seo All rights reserved.
 </footer>
-	</div>
-<script async defer src="/js/menu.js"></script>
 </body>
 </html>
