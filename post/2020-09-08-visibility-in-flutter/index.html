@@ -74,7 +74,7 @@
 
   <div class="content" itemprop="articleBody">
   
-    <p><img src="https://sh0seo.github.io/images/flutter-widget-all.png" alt=""></p>
+    <p><img src="https://sh0seo.github.io/img/flutter-widget-all.png" alt=""></p>
 <p>flutter에서 모든 건 Widget입니다. 간단한 문자를 출력하는 <a href="https://api.flutter.dev/flutter/widgets/Text-class.html">Text</a>부터, 다른 Widget을 담기 위한 <a href="https://api.flutter.dev/flutter/widgets/Container-class.html">Container</a>까지도 모두 Widget입니다. 한마디로 사용자에게 보이든, 보이지 않든 화면을 구성하는 모든 것은 Widget입니다.</p>
 <p><img src="https://sh0seo.github.io/images/flutter-widget-container.png" alt=""></p>
 <p>그리고 한발 더 나아가서 Widget 자체의 Show, Hide 까지도 별도의 Widget(<a href="https://api.flutter.dev/flutter/widgets/Visibility-class.html">Visibility</a>)입니다.</p>
@@ -88,7 +88,7 @@
 <pre><code>document.getElementById(&quot;element&quot;).style.display = &quot;none&quot;;
 </code></pre><h2 id="flutter에서-visibility는-visibility-widget을-사용">Flutter에서 Visibility는 Visibility Widget을 사용</h2>
 <p>그렇다면 flutter에서는 Visibility Widget으로 어떻게 show, hide를 구현 할까요? 아래와 같이 중앙에 Text 문구를 출력하는 앱이 있습니다. 플로팅 버튼을 클릭하면 앱이 사라지게 구현을 해봅시다.</p>
-<p><img src="https://sh0seo.github.io/images/flutter-widget-text.png" alt=""></p>
+<p><img src="https://sh0seo.github.io/img/flutter-widget-text.png" alt=""></p>
 <div class="highlight"><pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">_MyHomePageState</span> <span class="kd">extends</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">MyHomePage</span><span class="o">&gt;</span> <span class="p">{</span>
   <span class="kt">bool</span> <span class="n">_visibility</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
