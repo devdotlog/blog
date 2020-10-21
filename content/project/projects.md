@@ -2,7 +2,7 @@
 title: "My Toy Projects"
 date: 2020-08-05
 toc: false
-comments: false
+comments: true
 pager: false
 menu: main
 weight: 3
