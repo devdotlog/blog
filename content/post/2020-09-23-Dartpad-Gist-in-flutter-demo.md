@@ -9,7 +9,7 @@ tags:
  - gist
 ---
 
-![](https://sh0seo.github.io/images/dart-main.png)
+![](https://sh0seo.github.io/img/dart-main.png)
 
 [dartpad.dev](https://dartpad.dev/)는 dart 언어를 직접 실행할 수 있는 REPL(read-eval-print loop) 사이트입니다. dart 개발 환경을 따로 구축하지 않고 dart 코드를 바로 실행해볼 수 있는 유용한 사이트입니다. 
 
