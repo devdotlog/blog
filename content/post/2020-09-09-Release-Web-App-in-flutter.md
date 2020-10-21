@@ -10,7 +10,7 @@ tags:
  - release
 ---
 
-![release](https://sh0seo.github.io/images/release.png)
+![release](https://sh0seo.github.io/img/release.png)
 
 Flutter를 이용하여 Web App을 개발했다면, 서버에 Deploy 하기 전에 Release 상태로 테스트를 진행해야 합니다.
 
@@ -30,7 +30,7 @@ $ flutter build web
 
 정상적으로 빌드가 되었다면 프로젝트 폴더 내에 ```프로젝트폴더/build/web``` 디렉토리에 index.html 파일을 포함한 release 파일들이 생성된 것을 확인할 수 있습니다.
 
-![release-web](https://sh0seo.github.io/images/release-web.png)
+![release-web](https://sh0seo.github.io/img/release-web.png)
 
 ## Web Server 실행
 
@@ -78,7 +78,7 @@ $ ngrok http 8080
 ```
 ngrok이 실행되면 임시 URL이 화면에 출력됩니다. 해당 URL로 접속하면 로컬의 8080 서버로 http 요청을 전달해주게 됩니다.
 
-![release-ngrok](https://sh0seo.github.io/images/release-ngrok-result.png)
+![release-ngrok](https://sh0seo.github.io/img/release-ngrok-result.png)
 
 ## 참조
 

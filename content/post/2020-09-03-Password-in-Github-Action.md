@@ -185,7 +185,7 @@ on:
 
 그리고 Github Action 스크립트는 소스코드와 달리 github site에서 직접 수정하는 것이 도움이 됩니다. github site의 에디터에서 직접 수정을 하면 cron의 경우 아래와 같이 시간에 대한 정보를 확인할 수 있습니다.
 
-![](https://sh0seo.github.io/images/cron-preview.png)
+![](https://sh0seo.github.io/img/cron-preview.png)
 
 전체 스크립트는 아래와 같습니다.
 
@@ -234,7 +234,7 @@ jobs:
 
 그렇다면 ```${{ secrets.XXXXX }}``` 값은 어디에서 설정하면 될까요? github의 해당 프로젝트의 setting 에서 관리할 수 있습니다. 
 
-![](https://sh0seo.github.io/images/secrets-value.png)
+![](https://sh0seo.github.io/img/secrets-value.png)
 
 ## 결론
 

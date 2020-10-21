@@ -17,13 +17,13 @@ tags:
 
 dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 `RUN`을 클릭하면 결과를 확인할 수 있습니다. 
 
-![](https://sh0seo.github.io/images/dart-flutter-ui.png)
+![](https://sh0seo.github.io/img/dart-flutter-ui.png)
 
 # 소스코드 공유 기능 부재
 
 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 [play.golang.org](https://play.golang.org/)에는 `share` 기능을 통해 테스트한 코드를 공유할 수 있습니다.
 
-![](https://sh0seo.github.io/images/dart-golang.png)
+![](https://sh0seo.github.io/img/dart-golang.png)
 
 # Gist를 이용한 Flutter UI 코드 공유하기
 
@@ -33,11 +33,11 @@ dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없�
 1. gist에 public 상태로 에러 없는 Flutter 코드를 저장합니다.
 2. 코드를 저장하면 아래와 같이 URL에 ID를 확인할 수 있습니다.
 
-![](https://sh0seo.github.io/images/dart-gist.png)
+![](https://sh0seo.github.io/img/dart-gist.png)
 
 3. gist의 id를 dartpad.dev에 URL Path로 지정합니다.
 
-![](https://sh0seo.github.ioimages/dart-dartpad.png)
+![](https://sh0seo.github.io/img/dart-dartpad.png)
 
 # 결론
 

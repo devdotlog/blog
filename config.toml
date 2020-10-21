@@ -12,7 +12,7 @@ pygmentsUseClasses = true
 [Author]
   name = "about sh0seo"
   bio = "Just do it."
-  avatar = "img/logo.jpg"
+  avatar = "img/logo.png"
 
 [Params]
   subtitle = "개발자 블로그"
