@@ -6,13 +6,15 @@
     <description>Recent content on my side projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-    
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Toy Projects</title>
+      <link>https://sh0seo.github.io/project/projects/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sh0seo.github.io/project/projects/</guid>
+      <description>DCCafe  https://github.com/DCBlock DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  TimeTimer  https://play.google.com/store/apps/details?id=io.animal.mouse 안드로이드 Timer App java, android  BabyLock  https://github.com/sh0seo/BabyLock 동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App java, android  역대 로또당첨번호 listing  https://sh0seo.github.com/lottery-history 역대 로또당첨번호를 전체 lising하는 페이지 golang, github action  Clash Royale Play Replay Youtube 운영&amp;quot;  https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/ Clash Royale 게임 플레이 영상 Youtube GIMP, DaVinci Resolve  DCCafe 사용자 Half-Auto 업데이트  https://github.</description>
+    </item>
     
     <item>
       <title>Github Pages에서 HTTPS를 사용하지 않기</title>
@@ -25,8 +27,6 @@
 https를 사용하고 싶지 않다면? 만약, default로 제공되는 https를 사용하지 않는다면 어떻게 해야 할까요? default로 https를 제공하지만 계정명.github.io URL를 사용한다면 무조건 HTTPS 상태가 강제됩니다. 아래와 같이 setting -&amp;gt; Github Pages -&amp;gt; Enforce HTTPS는 설정을 변경할 수 없는 상태로 제공됩니다.</description>
     </item>
     
-    
-    
     <item>
       <title>DartPad와 Gist를 이용한 Flutter UI Demo 만들기</title>
       <link>https://sh0seo.github.io/post/2020-09-23-dartpad-gist-in-flutter-demo/</link>
@@ -37,8 +37,6 @@ https를 사용하고 싶지 않다면? 만약, default로 제공되는 https를
 Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutter 코드, 즉 UI를 테스트 할 수 있는 기능도 제공합니다. 에러가 없는 코드를 입력한 후에 RUN을 클릭하면 결과를 확인할 수 있습니다.
 소스코드 공유 기능 부재 dartpad.dev에는 다른 REPL site와 달리 소스코드 공유 기능이 없습니다. 예를 들어 golang의 REPL 사이트인 play.</description>
     </item>
-    
-    
     
     <item>
       <title>Youtube 구독자 100명 달성 후기</title>
@@ -52,8 +50,6 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
 사용한 툴은?</description>
     </item>
     
-    
-    
     <item>
       <title>Flutter에서 모든건 Widget이다. Show/Hide까지도.</title>
       <link>https://sh0seo.github.io/post/2020-09-08-visibility-in-flutter/</link>
@@ -64,8 +60,6 @@ Flutter UI 테스트 기능 dartpad.dev에는 dart 코드 뿐만 아니라 Flutt
 그리고 한발 더 나아가서 Widget 자체의 Show, Hide 까지도 별도의 Widget(Visibility)입니다.
 다른 UI에서 Visibility UI를 다루는 다른 프레임워크를 보면 일반적으로 A라는 컴포넌트를 사용자에게 Show, Hide 처리하는 것은 그 컴포넌트 자체에서 show(), hide() 함수(혹은 메소드)를 제공하거나 투명도를 0으로 설정하여 처리하곤합니다. 예를 들어 안드로이드에서 TextView는 xml에서 visibility를 설정할 수 있습니다.</description>
     </item>
-    
-    
     
     <item>
       <title>Flutter로 개발한 Web App을 Release 모드로 테스트하기</title>
@@ -80,8 +74,6 @@ $ flutter build web 정상적으로 빌드가 되었다면 프로젝트 폴더 �
 Web Server 실행 빌드된 소스는 정적 웹페이지 리소스입니다.</description>
     </item>
     
-    
-    
     <item>
       <title>Github Action을 이용한 빌드 &amp; 실행에서 패스워드 숨기기</title>
       <link>https://sh0seo.github.io/post/2020-09-03-password-in-github-action/</link>
@@ -93,8 +85,6 @@ Github Actions을 이용하면 hugo blog 빌드 &amp;amp; 배포, cron을 이용
 Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주일에 한번씩 DB를 업데이트 해야하는 일이 있다고 가정합니다.
  사용하는 DB용 클라이언트를 실행 login/password로 로그인 업데이트 query를 수행하기 위한 데이터 확인 Query를 실행 잊지 않고 정해진 요일에 반복 수행  아마도 개발자는 위와 같은 단계를 반복적으로 수행하게 됩니다.</description>
     </item>
-    
-    
     
     <item>
       <title>Hello World</title>
@@ -109,8 +99,14 @@ comment는 일단 disques
 그런데 누가 댓글쓰지도 않는거 달아서 뭐하나&amp;hellip; ㅎ;;</description>
     </item>
     
-    
-    
+    <item>
+      <title>About</title>
+      <link>https://sh0seo.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sh0seo.github.io/about/</guid>
+      <description>나는 누구인가?  프로그래 언어로 console 화면에 Hello World! 찍는 직업을 갖는 사람 회사에서는 spring boot를 이용한 backend 개발로 먹고 사는 사람 🐳 Golang에 관심을 갖고 있는 사람(stackoverflow에 go로 1000점 언제찍냐;;) 🐦 Swift, 🐍 Python  </description>
+    </item>
     
   </channel>
 </rss>
