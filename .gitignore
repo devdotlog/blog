@@ -1,6 +1,8 @@
 # Hugo default output directory
 /public
 /resource/_gen/
+_site/
+
 
 ## OS Files
 # Windows

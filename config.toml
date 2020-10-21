@@ -1,12 +1,13 @@
-# https://themes.gohugo.io/mainroad/
-
 baseURL = "https://sh0seo.github.io/"
 languageCode = "en-us"
-title = "my blog"
+title = "my side projects"
 paginate = 10
-theme = "mainroad"
+theme = "etch"
 disqusShortname = "devdotlog"
 googleAnalytics = "UA-156450601-1"
+enableInlineShortcodes = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
 
 [Author]
   name = "about sh0seo"
@@ -27,88 +28,36 @@ googleAnalytics = "UA-156450601-1"
   post_meta = ["date", "categories"] # Order of post meta information
   #mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "2006-01-02" # Change the format of dates
-  
+  dark = "auto"
+  highlight = true
   #mathjax = true # Enable MathJax
   #mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   #mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
   
-  highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
-  #customCSS = ["css/custom.css"] # Include custom CSS files
-  #customJS = ["js/custom.js"] # Include custom JS files
-
-[Params.style.vars]
-  highlightColor = "#e22d30" # Override highlight color
-
-  # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
-  # Take care of different quotes OR escaping symbols in these params if necessary
-  fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
-  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
-
-[Params.logo]
-  #image = "img/logo.png" # Logo image. Path relative to "static"
-  title = "My Blog" # Logo title, otherwise will use site title
-  subtitle = "Just do it" # Logo subtitle
-
-[Params.sidebar]
-  home = "right" # Configure layout for home page
-  #list = "right"  # Configure layout for list pages
-  single = false # Configure layout for single pages
-  # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist"]
-  # alternatively "ddg-search" can be used, to search via DuckDuckGo
-  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
-
-[Params.widgets]
-  recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget
-
-[Params.widgets.social]
-  #facebook = "username"
-  #twitter = "username"
-  #instagram = "username"
-  #linkedin = "username"
-  #telegram = "username"
-  github = "sh0seo"
-  #gitlab = "username"
-  #bitbucket = "username"
-  email = "ssh0702@gmail.com"
-
-# Custom social links
-#[[Params.widgets.social.custom]]
-#  title = "Github"
-#  url = "https://youtube.com/user/username"
-#  icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
-
-#[[Params.widgets.social.custom]]
-#  title = "My Home Page"
-#  url = "http://example.com"
-  
-  # show projects list
-  # project list path data/projects.json
-  #showProjectList = true
-  #projectsUrl = "https://github.com/sh0seo"
+  #highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    identifier = "posts"
+    name = "posts"
+    title = "posts"
     url = "/"
-    weight = 1
+    weight = 10
 
   [[menu.main]]
-    name = "All posts"
-    url = "/post/"
-    weight = 2
-
-  #[[menu.main]]
-  #  name = "Tags"
-  #  url = "/tags"
-  #  weight = 3
-
-  [[menu.main]]
-    name = "About"
+    identifier = "about"
+    name = "about"
+    title = "about"
     url = "/about/"
-    weight = 4
+    weight = 20
 
-[social]
-github = "sh0seo"
+[permalinks]
+  posts = "/:title/"
+
+[markup.goldmark.renderer]
+  # Allow HTML in Markdown
+  unsafe = true
+
+[markup.tableOfContents]
+  ordered = true
