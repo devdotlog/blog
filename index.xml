@@ -8,15 +8,6 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My Toy Projects</title>
-      <link>https://sh0seo.github.io/project/projects/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/project/projects/</guid>
-      <description>DCCafe  https://github.com/DCBlock DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  TimeTimer  https://play.google.com/store/apps/details?id=io.animal.mouse 안드로이드 Timer App java, android  BabyLock  https://github.com/sh0seo/BabyLock 동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App java, android  역대 로또당첨번호 listing  https://sh0seo.github.com/lottery-history 역대 로또당첨번호를 전체 lising하는 페이지 golang, github action  Clash Royale Play Replay Youtube 운영&amp;quot;  https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/ Clash Royale 게임 플레이 영상 Youtube GIMP, DaVinci Resolve  DCCafe 사용자 Half-Auto 업데이트  https://github.</description>
-    </item>
-    
-    <item>
       <title>DartPad와 Gist를 이용한 Flutter UI Demo 만들기</title>
       <link>https://sh0seo.github.io/post/2020-09-23-dartpad-gist-in-flutter-demo/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
@@ -76,16 +67,13 @@ Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주�
     </item>
     
     <item>
-      <title>Hello World</title>
-      <link>https://sh0seo.github.io/post/2020-08-05-hello-world/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <title>DCCafe 사내전용 커피 키오스크 시스템 개발</title>
+      <link>https://sh0seo.github.io/post/2019-02-09-dccafe/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-08-05-hello-world/</guid>
-      <description>Hello World! Hugo를 이용한 Static Blog testing.
-comment는 일단 disques
-여기 아래에 utterence가 나와야 하는데&amp;hellip; 되나??
-잘나오네 Good.
-그런데 누가 댓글쓰지도 않는거 달아서 뭐하나&amp;hellip; ㅎ;;</description>
+      <guid>https://sh0seo.github.io/post/2019-02-09-dccafe/</guid>
+      <description>DCCafe 사내전용 커피 키오스크 시스템 개발 DigiCAP 사내 커피 키오스크 시스템 개발 프로젝트
+ https://github.com/DCBlock/ DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  </description>
     </item>
     
     <item>

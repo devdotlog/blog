@@ -67,16 +67,13 @@ Github Actions을 이용해서 DB 데이터 업데이트하기 만약에 일주�
     </item>
     
     <item>
-      <title>Hello World</title>
-      <link>https://sh0seo.github.io/post/2020-08-05-hello-world/</link>
-      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <title>DCCafe 사내전용 커피 키오스크 시스템 개발</title>
+      <link>https://sh0seo.github.io/post/2019-02-09-dccafe/</link>
+      <pubDate>Sat, 09 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://sh0seo.github.io/post/2020-08-05-hello-world/</guid>
-      <description>Hello World! Hugo를 이용한 Static Blog testing.
-comment는 일단 disques
-여기 아래에 utterence가 나와야 하는데&amp;hellip; 되나??
-잘나오네 Good.
-그런데 누가 댓글쓰지도 않는거 달아서 뭐하나&amp;hellip; ㅎ;;</description>
+      <guid>https://sh0seo.github.io/post/2019-02-09-dccafe/</guid>
+      <description>DCCafe 사내전용 커피 키오스크 시스템 개발 DigiCAP 사내 커피 키오스크 시스템 개발 프로젝트
+ https://github.com/DCBlock/ DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  </description>
     </item>
     
   </channel>
