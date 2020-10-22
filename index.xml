@@ -6,7 +6,7 @@
     <description>Recent content on my side projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sh0seo.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Toy Projects</title>
       <link>https://sh0seo.github.io/project/projects/</link>
@@ -14,17 +14,6 @@
       
       <guid>https://sh0seo.github.io/project/projects/</guid>
       <description>DCCafe  https://github.com/DCBlock DigiCAP 사내 전용 커피 판매 시스템 java, spring boot, api server  TimeTimer  https://play.google.com/store/apps/details?id=io.animal.mouse 안드로이드 Timer App java, android  BabyLock  https://github.com/sh0seo/BabyLock 동영상 시청 중에 안드로이드 폰의 물리버튼을 제어하는 App java, android  역대 로또당첨번호 listing  https://sh0seo.github.com/lottery-history 역대 로또당첨번호를 전체 lising하는 페이지 golang, github action  Clash Royale Play Replay Youtube 운영&amp;quot;  https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/ Clash Royale 게임 플레이 영상 Youtube GIMP, DaVinci Resolve  DCCafe 사용자 Half-Auto 업데이트  https://github.</description>
-    </item>
-    
-    <item>
-      <title>Github Pages에서 HTTPS를 사용하지 않기</title>
-      <link>https://sh0seo.github.io/post/2020-09-08-disable-https-in-github-pages/</link>
-      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://sh0seo.github.io/post/2020-09-08-disable-https-in-github-pages/</guid>
-      <description>Github Pages는 정적 웹사이트를 제공하는 기능입니다. Github 계정명.github.io 도메인을 자동으로 사용할 수 있는 괜찮은 서비스입니다. 기본적으로 jekyll을 이용하여 서비스를 제공합니다.
-계정명.github.io URL은 default로 https를 활성화 상태로 제공이 됩니다. setting으로 이동해서 보면 아래와 같이 Github Pages에 대한 설정을 변경할 수 있습니다.
-https를 사용하고 싶지 않다면? 만약, default로 제공되는 https를 사용하지 않는다면 어떻게 해야 할까요? default로 https를 제공하지만 계정명.github.io URL를 사용한다면 무조건 HTTPS 상태가 강제됩니다. 아래와 같이 setting -&amp;gt; Github Pages -&amp;gt; Enforce HTTPS는 설정을 변경할 수 없는 상태로 제공됩니다.</description>
     </item>
     
     <item>
@@ -105,7 +94,7 @@ comment는 일단 disques
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sh0seo.github.io/about/</guid>
-      <description>나는 누구인가?  프로그래 언어로 console 화면에 Hello World! 찍는 직업을 갖는 사람 회사에서는 spring boot를 이용한 backend 개발로 먹고 사는 사람 🐳 Golang에 관심을 갖고 있는 사람(stackoverflow에 go로 1000점 언제찍냐;;) 🐦 Swift, 🐍 Python  </description>
+      <description>나는 누구인가?  프로그래 언어로 console 화면에 Hello World! 찍는 직업을 갖는 사람 회사에서는 spring boot를 이용한 backend 개발로 먹고 사는 사람 🐳 Golang에 관심을 갖고 있는 사람(stackoverflow에 go로 1000점 언제찍냐;;) 🐦 Swift 🐍 Python  </description>
     </item>
     
   </channel>

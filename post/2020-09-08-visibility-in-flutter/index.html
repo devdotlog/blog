@@ -58,8 +58,6 @@
         <a href="#"><i class="fas fa-bars fa-2x"></i></a>
       </li>
        
-        <li><a href="/project/projects/">My Toy Projects</a></li>
-       
         <li><a href="/">posts</a></li>
        
         <li><a href="/about/">about</a></li>
@@ -80,63 +78,63 @@
 <p>그리고 한발 더 나아가서 Widget 자체의 Show, Hide 까지도 별도의 Widget(<a href="https://api.flutter.dev/flutter/widgets/Visibility-class.html">Visibility</a>)입니다.</p>
 <h2 id="다른-ui에서-visibility">다른 UI에서 Visibility</h2>
 <p>UI를 다루는 다른 프레임워크를 보면 일반적으로 A라는 컴포넌트를 사용자에게 Show, Hide 처리하는 것은 그 컴포넌트 자체에서 show(), hide() 함수(혹은 메소드)를 제공하거나 투명도를 0으로 설정하여 처리하곤합니다. 예를 들어 안드로이드에서 TextView는 xml에서 visibility를 설정할 수 있습니다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;TextView</span>
-    <span class="err">...</span>
-    <span class="na">android:visibility=</span><span class="s">&#34;gone&#34;</span>
-<span class="nt">/&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;TextView</span>
+    <span style="color:#960050;background-color:#1e0010">...</span>
+    <span style="color:#a6e22e">android:visibility=</span><span style="color:#e6db74">&#34;gone&#34;</span>
+<span style="color:#f92672">/&gt;</span>
 </code></pre></div><p>html에서는 대상의 style.display에 설정을 통해 show, hide를 처리합니다.</p>
 <pre><code>document.getElementById(&quot;element&quot;).style.display = &quot;none&quot;;
 </code></pre><h2 id="flutter에서-visibility는-visibility-widget을-사용">Flutter에서 Visibility는 Visibility Widget을 사용</h2>
 <p>그렇다면 flutter에서는 Visibility Widget으로 어떻게 show, hide를 구현 할까요? 아래와 같이 중앙에 Text 문구를 출력하는 앱이 있습니다. 플로팅 버튼을 클릭하면 앱이 사라지게 구현을 해봅시다.</p>
 <p><img src="https://sh0seo.github.io/img/flutter-widget-text.png" alt=""></p>
-<div class="highlight"><pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">_MyHomePageState</span> <span class="kd">extends</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">MyHomePage</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="kt">bool</span> <span class="n">_visibility</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">_MyHomePageState</span> <span style="color:#66d9ef">extends</span> State<span style="color:#f92672">&lt;</span>MyHomePage<span style="color:#f92672">&gt;</span> {
+  <span style="color:#66d9ef">bool</span> _visibility <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
 
-  <span class="kt">void</span> <span class="n">_show</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">setState</span><span class="p">(()</span> <span class="p">{</span>
-      <span class="n">_visibility</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
+  <span style="color:#66d9ef">void</span> _show() {
+    setState(() {
+      _visibility <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+    });
+  }
 
-  <span class="kt">void</span> <span class="n">_hide</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">setState</span><span class="p">(()</span> <span class="p">{</span>
-      <span class="n">_visibility</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
+  <span style="color:#66d9ef">void</span> _hide() {
+    setState(() {
+      _visibility <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+    });
+  }
   
-  <span class="err">@</span><span class="n">override</span>
-  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">Scaffold</span><span class="p">(</span>
-      <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
-        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;widget.title&#39;</span><span class="p">),</span>
-      <span class="p">),</span>
-      <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
-        <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
-          <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">center</span><span class="p">,</span>
-          <span class="nl">children:</span> <span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span><span class="p">[</span>
-              <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;이 글자를 안보이게 하고 싶습니다.&#39;</span><span class="p">,</span>
-                <span class="nl">style:</span> <span class="n">Theme</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">textTheme</span><span class="p">.</span><span class="n">headline4</span><span class="p">,</span>  
-              <span class="p">),</span>
-          <span class="p">],</span>
-        <span class="p">),</span>
-      <span class="p">),</span>
-      <span class="nl">floatingActionButton:</span> <span class="n">FloatingActionButton</span><span class="p">(</span>
-        <span class="nl">onPressed:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="n">_visibility</span><span class="o">?</span> <span class="n">_hide</span><span class="p">()</span> <span class="o">:</span> <span class="n">_show</span><span class="p">()},</span>
-        <span class="nl">tooltip:</span> <span class="s1">&#39;show/hide&#39;</span><span class="p">,</span>
-        <span class="nl">child:</span> <span class="n">Icon</span><span class="p">(</span><span class="n">Icons</span><span class="p">.</span><span class="n">add</span><span class="p">),</span>
-      <span class="p">),</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  <span style="color:#960050;background-color:#1e0010">@</span>override
+  Widget build(BuildContext context) {
+    <span style="color:#66d9ef">return</span> Scaffold(
+      appBar: AppBar(
+        title: Text(<span style="color:#e6db74">&#39;widget.title&#39;</span>),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <span style="color:#f92672">&lt;</span>Widget<span style="color:#f92672">&gt;</span>[
+              Text(<span style="color:#e6db74">&#39;이 글자를 안보이게 하고 싶습니다.&#39;</span>,
+                style: Theme.of(context).textTheme.headline4,  
+              ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () <span style="color:#f92672">=&gt;</span> {_visibility<span style="color:#f92672">?</span> _hide() <span style="color:#f92672">:</span> _show()},
+        tooltip: <span style="color:#e6db74">&#39;show/hide&#39;</span>,
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
 </code></pre></div><p>Text Widget을 <strong>Visibility Widget</strong>의 child로 감싸줍니다. 그리고 변경이 필요한 시점에 _visibility를 이용하여 상태를 Text Widget의 show/hide를 관리합니다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-dart" data-lang="dart"><span class="nl">children:</span> <span class="o">&lt;</span><span class="n">Widget</span><span class="o">&gt;</span><span class="p">[</span>
-  <span class="n">Visiblity</span><span class="p">(</span>
-    <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;이 글자를 안보이게 하고 싶습니다.&#39;</span><span class="p">,</span>
-      <span class="nl">style:</span> <span class="n">Theme</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="n">context</span><span class="p">).</span><span class="n">textTheme</span><span class="p">.</span><span class="n">headline4</span><span class="p">,</span>  
-    <span class="p">),</span>
-    <span class="nl">visible:</span> <span class="n">_visibility</span><span class="p">,</span>
-  <span class="p">),</span>
-<span class="p">],</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dart" data-lang="dart">children: <span style="color:#f92672">&lt;</span>Widget<span style="color:#f92672">&gt;</span>[
+  Visiblity(
+    child: Text(<span style="color:#e6db74">&#39;이 글자를 안보이게 하고 싶습니다.&#39;</span>,
+      style: Theme.of(context).textTheme.headline4,  
+    ),
+    visible: _visibility,
+  ),
+],
 </code></pre></div><h2 id="정리">정리</h2>
 <p>Android, html의 show/hide와 달리 Visibility 자체도 Widget으로 따로 처리한다는 것이 낮설게 느껴졌지만 여백 같은 빈공간 조차도 <a href="https://api.flutter.dev/flutter/widgets/SizedBox-class.html">SizedBox Widget</a>으로 구현해 놓은걸 보면 flutter가 skia로 랜더링하기 위해서 모든 것을 Widget화 시킨게 아닌가 추측됩니다.</p>
 <h2 id="참조">참조</h2>
@@ -158,8 +156,6 @@
   <div class="footer-right">
     <nav>
       <ul>
-         
-        <li><a href="/project/projects/">My Toy Projects</a></li>
          
         <li><a href="/">posts</a></li>
          
