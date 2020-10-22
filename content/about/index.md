@@ -1,8 +1,5 @@
 ---
 title: "About"
-toc: false
-pager: false
-authorbox: false
 comments: true
 ---
 

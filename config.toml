@@ -5,12 +5,9 @@ paginate = 10
 theme = "cactus"
 disqusShortname = "devdotlog"
 googleAnalytics = "UA-156450601-1"
-enableInlineShortcodes = true
-#pygmentsCodeFences = true
-#pygmentsUseClasses = true
-colortheme = "light" # dark, light, white, or classic
-rss = true # generate rss feed. default value is false
 googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+colortheme = "classic" # dark, light, white, or classic
+rss = true # generate rss feed. default value is false
 
 [Author]
   name = "about sh0seo"
@@ -19,39 +16,34 @@ googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by
 
 [Params]
   subtitle = "개발자 블로그"
-  description = "뭐라도 좀 적고, 써야 남지 않을까?"
+  description = "뭐라도 좀 적고, 써야 남지 않을까? / Site Project 정리용."
   copyright = "sh0seo All rights reserved."
-  #opengraph = true # Enable OpenGraph if true
-  #schema = true # Enable Schema
-  #twitter_cards = true # Enable Twitter Cards if true
-  #readmore = false # Show "Read more" button in list if true
-  #authorbox = true # Show authorbox at bottom of pages if true
-  #toc = true # Enable Table of Contents
-  #pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
-  #post_meta = ["date", "categories"] # Order of post meta information
-  #mainSections = ["post", "blog", "news"] # Specify section pages to show on home page and the "Recent articles" widget
   dateformat = "2006-01-02" # Change the format of dates
-
+  showAllPostsOnHomePage = true
+  postsOnHomePage = 100
+  mainSection = "posts"
   highlight = true
   #mathjax = true # Enable MathJax
   #mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   #mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
-  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
-  
-  #highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
+  #googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+
+  showProjectsList = false
+  projectsUrl = "https://github.com/monkeyWzr"
 
   [params.comments]
-    enabled = false # default
+    enabled = true # default
     engine = "disqus" # more supported engines will be added.
 
   # the value of name should be an valid font awesome icon name (brands type)
   # https://fontawesome.com/icons?d=gallery&s=brands
-  [[params.social]]
-    name = "github"
-    link = "https://github.com/sh0seo/"
-  [[params.social]]
-    name = "email"
-    link = "ssh0702@gmail.com"  # no need for "mailto:" in the head
+[[params.social]]
+  name = "github"
+  link = "https://github.com/sh0seo/"
+
+[[params.social]]
+  name = "email"
+  link = "ssh0702@gmail.com"  # no need for "mailto:" in the head
 
 [menu]
   [[menu.main]]
@@ -70,10 +62,3 @@ googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by
 
 [permalinks]
   posts = "/:title/"
-
-[markup.goldmark.renderer]
-  # Allow HTML in Markdown
-  unsafe = true
-
-[markup.tableOfContents]
-  ordered = true
