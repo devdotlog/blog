@@ -78,42 +78,16 @@
   </url>
   
   <url>
-    <loc>https://sh0seo.github.io/tags/action/</loc>
-    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sh0seo.github.io/categories/</loc>
-    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sh0seo.github.io/tags/github/</loc>
-    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sh0seo.github.io/post/2020-09-03-password-in-github-action/</loc>
-    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sh0seo.github.io/tags/go/</loc>
-    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sh0seo.github.io/categories/go/</loc>
-    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sh0seo.github.io/post/2019-02-09-dccafe/</loc>
     <lastmod>2019-02-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://sh0seo.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sh0seo.github.io/categories/</loc>
   </url>
   
 </urlset>
