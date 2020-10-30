@@ -28,7 +28,7 @@ tags:
 1. 일년만 해보자
 2. 구독자 100명까지만 해보자.
 
-2020년 2월 11일 첫번째 영상을 올리고 7개월이 흐른 지금 구독자 100명을 찍었습니다.
+2020년 2월 11일 첫번째 영상을 올리고 7개월이 흐른 지금 구독자 100명을 찍었습니다[Colosseum](https://www.youtube.com/channel/UCgGMFq_Fk19M1QF90sDdgGg/).
 
 ![](https://sh0seo.github.io/img/youtube_colosseum.png)
 
